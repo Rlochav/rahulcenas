@@ -1,0 +1,60 @@
+.accordionButton {	
+	width: 100%;  /* Float works in all browsers but IE6 */
+	background: #fff;
+	border: 1px solid #dee5eb;
+	cursor: pointer;
+	margin-bottom: 10px;
+	padding: 10px 10px 10px 15px;
+	color: #6b6c6d;
+	float: left;
+	font-size: 16px;
+	font-weight: 600;
+	position: relative;
+}
+.accordionButton:after{
+	content: '\f107';
+	display: block;
+	right: 15px;
+	top: 10px;
+	position: absolute;
+	/* background: url(../images/arrow-down.png) no-repeat 1px 1px; */
+	width: 15px;
+	height: 10px;
+	font-family: "FontAwesome";
+	color: #fff;
+}
+.on:after{
+	content: '\f106';
+	display: block;
+	right: 15px;
+	top: 10px;
+	position: absolute;
+	/* background: url(../images/arrow-down.png) no-repeat 1px 1px; */
+	width: 15px;
+	height: 10px;
+	font-family: "FontAwesome";
+	color: #fff;
+}
+.accordionContent {	
+	width: 100%;
+	float: left;
+	_float: none; /* Float works in all browsers but IE6 */
+	background: #fff;
+	border: 1px solid #dee5eb;
+	margin-top: -11px;
+	margin-bottom: 10px;
+	font-size: 15px;
+	padding: 10px;
+}
+	
+/***********************************************************************************************************************
+ EXTRA STYLES ADDED FOR MOUSEOVER / ACTIVE EVENTS
+************************************************************************************************************************/
+
+/*.on {
+	background: #fff url(../images/faq-icon.png) no-repeat 15px 12px;
+	}
+	
+.over {
+	background: #fff url(../images/faq-icon.png) no-repeat 15px 12px;
+	}*/
