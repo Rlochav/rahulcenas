@@ -9,7 +9,7 @@ import org.springframework.core.annotation.Order;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
-@Order(100)
+@Order(150)
 @Transactional(propagation = Propagation.REQUIRES_NEW, rollbackFor = Throwable.class)
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.METHOD)

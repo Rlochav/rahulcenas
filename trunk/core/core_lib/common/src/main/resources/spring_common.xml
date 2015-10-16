@@ -16,4 +16,5 @@
 	<bean id="configurationProperty" class="com.ceostocks.common.util.SimpleConfigurationProperty"></bean>
 
 	<bean id="ceoApplicationAspect" class="com.ceostocks.common.advice.CeoApplicationAspect"></bean>
+	<bean id="flushAspect" class="com.ceostocks.common.advice.FlushAspect"></bean>
 </beans>
