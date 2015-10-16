@@ -9,6 +9,7 @@ import org.springframework.context.MessageSource;
 
 import com.ceostocks.application.mapper.FriendDTOMapper;
 import com.ceostocks.application.mapper.FriendRequestDTOMapper;
+import com.ceostocks.common.annotation.CeoStocksDefaultTxn;
 import com.ceostocks.common.annotation.CeoStocksReadOnlyTxn;
 import com.ceostocks.common.annotation.CeoStocksReqNewTxn;
 import com.ceostocks.common.dto.DocumentDTO;
@@ -33,7 +34,7 @@ public class UserApplicationImpl implements UserApplication {
 		return userServices.doRegisterUser(userMaster);
 	}
 
-	@CeoStocksReqNewTxn
+	@CeoStocksDefaultTxn
 	@Override
 	public UserInfo doLogin(String userId, String password, String ipAddress) {
 		UserInfo userInfo = mapper(userServices.doLogin(userId, password, ipAddress));
