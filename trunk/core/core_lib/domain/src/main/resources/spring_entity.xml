@@ -7,7 +7,7 @@
 						http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.1.xsd">
 
 	<import resource="classpath:/spring_common.xml" />
-	<tx:annotation-driven />
+	<tx:annotation-driven order="300" />
 	<bean id="dataSource"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource"
 		depends-on="configurationProperty">
