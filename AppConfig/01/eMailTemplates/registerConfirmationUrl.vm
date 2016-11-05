@@ -12,7 +12,7 @@ strong, span{ color:#1774b6;}
 
 <body>
 <div class="wrapper">
-  <img src="#" alt="Ceo Stocks" width="165" height="157" align="right" />
+  <!--img src="#" alt="Ceo Stocks" width="165" height="157" align="right" /-->
   <h2>Welcome to CEO Stocks <span>${memberName}</span>!</h2>
   <p>First, we&rsquo;d like to thank you, <strong>${firstName}</strong>, for enrolling <strong>${memberName}</strong> into <a href="#">Ceo Stocks</a>, one of the  internet&rsquo;s fastest growing deals site.&nbsp; We&rsquo;re  ecstatic that you&rsquo;ve become one our <strong>US</strong> members. We have great things on the horizon and  we&rsquo;re very glad to have you join us in our spectacular future!<br />
   <h3>Now onto the good stuff you signed up for!</h3>
