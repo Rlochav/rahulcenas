@@ -18,7 +18,7 @@ strong, span{ color:#1774b6;}
   <h3>Now onto the good stuff you signed up for!</h3>
     Your login information is below.&nbsp; Please print out this email or write down the  information.&nbsp; If you ever loose your  information, please feel free to contact us via our contact form or emailing us  at <a href="mailto:members@ceostocks.com">members@ceostocks.com</a>.<br />
     <br />
-  <strong>Confirmation Url: ${URL}  (make sure it&rsquo;s a hot link)</strong><br />
+  <strong>Confirmation Url: <a href="${URL}">${URL}</a>  (make sure it&rsquo;s a hot link)</strong><br />
   <br />
     The password assigned to you is system-generated  for your account&rsquo;s protection.&nbsp; You can  change it at any time by logging into your Merchant Dashboard.&nbsp; The option to change your password will be in  the left navigation under &ldquo;Manage Your Information&rdquo; &ldquo;Account Password&rdquo;.<br />
     <br />
