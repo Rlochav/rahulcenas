@@ -173,7 +173,7 @@ public class EmailUtility {
 
 		props.put("mail.smtp.host", CeoStocksConfigProperty.getProperty("mail.smtp.host", dbId));
 		props.put("mail.smtp.port", CeoStocksConfigProperty.getProperty("mail.smtp.port", dbId));
-		props.put("mail.smtp.starttls.enable", "true");
+		props.put("mail.smtp.starttls.enable", "false");
 		props.put("mail.smtp.auth", "true");
 		props.put("mail.smtp.ssl.socketFactory", sf);
 		props.setProperty("mail.user", CeoStocksConfigProperty.getProperty("mail.smtp.user" + type, dbId));
