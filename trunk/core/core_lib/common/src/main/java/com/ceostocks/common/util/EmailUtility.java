@@ -178,6 +178,7 @@ public class EmailUtility {
 		props.put("mail.smtp.ssl.socketFactory", sf);
 		props.setProperty("mail.user", CeoStocksConfigProperty.getProperty("mail.smtp.user" + type, dbId));
 		props.setProperty("mail.password", CeoStocksConfigProperty.getProperty("mail.smtp.password", dbId));
+		System.out.println(CeoStocksConfigProperty.getProperty("mail.smtp.user" + type, dbId)+"/"+CeoStocksConfigProperty.getProperty("mail.smtp.password", dbId));
 		return props;
 	}
 
