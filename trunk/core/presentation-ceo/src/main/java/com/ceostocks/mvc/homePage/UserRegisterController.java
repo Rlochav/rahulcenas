@@ -56,8 +56,8 @@ public class UserRegisterController extends CeoStocksWebHandler {
 		holderMap.put("memberName", userMaster.getFirstName());
 		holderMap.put("firstName", userMaster.getFirstName());
 		holderMap.put("URL", getProperty("register.confirm.url", "01") + userMaster.getActivateCode());
-	/*	boolean isSent = EmailUtility.postMailType2("01", Arrays.asList(new String[] { userMaster.getEmailId() }), null, null,
-				getProperty("register.confirm.subject", "01"), "registerConfirmationUrl.vm", holderMap, 1);*/
+		boolean isSent = EmailUtility.postMailType2("01", Arrays.asList(new String[] { userMaster.getEmailId() }), null, null,
+				getProperty("register.confirm.subject", "01"), "registerConfirmationUrl.vm", holderMap, 1);
 	}
 
 	private void setUsermasterRequestParamas(UserMaster userMaster) {

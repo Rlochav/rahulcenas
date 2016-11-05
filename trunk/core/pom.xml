@@ -10,7 +10,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<spring.version>4.1.6.RELEASE</spring.version>
 		<hibernate.version>4.2.7.Final</hibernate.version>
-		<javax.mail>1.4.1</javax.mail>
+		<javax.mail>1.4.7</javax.mail>
 	</properties>
 
 	<developers>

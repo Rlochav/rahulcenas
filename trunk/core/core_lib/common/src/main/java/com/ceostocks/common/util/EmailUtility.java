@@ -4,6 +4,7 @@ import static com.ceostocks.common.util.CeoStocksConfigProperty.getProperty;
 
 import java.io.File;
 import java.io.StringWriter;
+import java.security.GeneralSecurityException;
 import java.util.List;
 import java.util.Map;
 import java.util.Properties;
@@ -25,6 +26,8 @@ import org.apache.velocity.VelocityContext;
 import org.apache.velocity.app.VelocityEngine;
 import org.apache.velocity.exception.ParseErrorException;
 import org.apache.velocity.exception.ResourceNotFoundException;
+
+import com.sun.mail.util.MailSSLSocketFactory;
 
 public class EmailUtility {
 
@@ -52,13 +55,13 @@ public class EmailUtility {
 		return true;
 	}
 
-	private static String parseVelocityMessage(String dbId, String templateName, Map<String, Object> holderMap, Integer type) throws ResourceNotFoundException,
-			ParseErrorException, Exception {
+	private static String parseVelocityMessage(String dbId, String templateName, Map<String, Object> holderMap, Integer type)
+			throws ResourceNotFoundException, ParseErrorException, Exception {
 
 		StringWriter w = new StringWriter();
 		VelocityEngine ve = new VelocityEngine();
 
-		Properties props = setEmailProperty(dbId, type);
+		Properties props = new Properties();
 		props.setProperty("file.resource.loader.path", CeoStocksConfigProperty.getAppConfigFolder() + File.separator + dbId + File.separator
 				+ CeoStocksConfigProperty.getProperty("mail.eMailTemplatesFolder", dbId));
 		props.setProperty("resource.loader", "file");
@@ -160,16 +163,19 @@ public class EmailUtility {
 		return true;
 	}
 
-	private static Properties setEmailProperty(String dbId, Integer type) {
+	private static Properties setEmailProperty(String dbId, Integer type) throws GeneralSecurityException {
+		MailSSLSocketFactory sf = new MailSSLSocketFactory();
+		sf.setTrustAllHosts(true);
 		// Get system properties
 		Properties props = System.getProperties();
 		// Setup mail server
-		props.put("mail.tranport.protocol", "smtp");
+		//props.put("mail.tranport.protocol", "smtp");
 
 		props.put("mail.smtp.host", CeoStocksConfigProperty.getProperty("mail.smtp.host", dbId));
 		props.put("mail.smtp.port", CeoStocksConfigProperty.getProperty("mail.smtp.port", dbId));
 		props.put("mail.smtp.starttls.enable", "true");
 		props.put("mail.smtp.auth", "true");
+		props.put("mail.smtp.ssl.socketFactory", sf);
 		props.setProperty("mail.user", CeoStocksConfigProperty.getProperty("mail.smtp.user" + type, dbId));
 		props.setProperty("mail.password", CeoStocksConfigProperty.getProperty("mail.smtp.password", dbId));
 		return props;
@@ -185,8 +191,8 @@ class SMTPAuthenticator extends javax.mail.Authenticator {
 	}
 
 	SMTPAuthenticator(String dbId, Integer type) {
-		authentication = new PasswordAuthentication(CeoStocksConfigProperty.getProperty("mail.smtp.user" + type, dbId), CeoStocksConfigProperty.getProperty(
-				"mail.smtp.password", dbId));
+		authentication = new PasswordAuthentication(CeoStocksConfigProperty.getProperty("mail.smtp.user" + type, dbId),
+				CeoStocksConfigProperty.getProperty("mail.smtp.password", dbId));
 	}
 
 	public PasswordAuthentication getPasswordAuthentication() {
