@@ -8,7 +8,8 @@ import com.ceostocks.common.handler.CeoStocksWebHandler;
 import com.ceostocks.mvc.urls.CeoUrls;
 
 @Controller
-public class ModuleController extends CeoStocksWebHandler {
+@RequestMapping("/component/")
+public class SiteAdminController extends CeoStocksWebHandler {
 
 	/**
 	 * 

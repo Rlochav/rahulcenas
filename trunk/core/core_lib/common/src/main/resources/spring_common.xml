@@ -12,7 +12,7 @@
 	<context:annotation-config />
 	<aop:aspectj-autoproxy />
 
-	<bean id="userInfo" class="com.ceostocks.common.dto.UserInfo"></bean>
+	<!-- <bean id="userInfo" class="com.ceostocks.common.dto.UserInfo"></bean> -->
 	<bean id="configurationProperty" class="com.ceostocks.common.util.SimpleConfigurationProperty"></bean>
 
 	<bean id="ceoApplicationAspect" class="com.ceostocks.common.advice.CeoApplicationAspect"></bean>

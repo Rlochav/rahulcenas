@@ -5,30 +5,23 @@
 			<div class="col-md-4">
 				<nav class="top-navigation">
 					<ul>
-						<li><a
-							href="<spring:message code="domain.component.prefix"/>profile/${userInfo.timelineId}"
-							class="color-white" title="Home"><span class="fa fa-home"></span> Home</a></li>
+						<li><a href="profile/${userInfo.timelineId}" class="color-white" title="Home"><span class="fa fa-home"></span>
+								Home</a></li>
 						<c:if test="${userInfo.permissionMap.M002_F001==true}">
-							<li><a href="#" class="color-white" title="Shopping"><span
-									class="fa fa-shopping-cart"></span> Shopping</a></li>
+							<li><a href="#" class="color-white" title="Shopping"><span class="fa fa-shopping-cart"></span> Shopping</a></li>
 						</c:if>
 						<c:if test="${userInfo.permissionMap.M003_F001==true}">
-							<li><a href="#" class="color-white" title="Admin"><span class="fa fa-shield"></span>
-									Investor</a></li>
+							<li><a href="#" class="color-white" title="Admin"><span class="fa fa-shield"></span> Investor</a></li>
 						</c:if>
 						<c:if test="${userInfo.permissionMap.M004_F001==true}">
-							<li><a href="#" class="color-white" title="Admin"><span class="fa fa-shield"></span>
-									Humanity</a></li>
+							<li><a href="#" class="color-white" title="Admin"><span class="fa fa-shield"></span> Humanity</a></li>
 						</c:if>
 						<c:if test="${userInfo.permissionMap.M005_F001==true}">
-							<li><a href="#" class="color-white" title="Admin"><span class="fa fa-shield"></span>
-									Admin</a></li>
+							<li><a href="#" class="color-white" title="Admin"><span class="fa fa-shield"></span> Admin</a></li>
 						</c:if>
 
-						<li><a href="#" class="color-white" title="Admin"><span class="fa fa-shield"></span>
-								Site Admin</a></li>
-						<li><a href="#" class="color-white" title="Market"><span class="fa fa-money"></span>
-								Market</a></li>
+						<li><a href="siteAdmin" class="color-white" title="Admin"><span class="fa fa-shield"></span> Site Admin</a></li>
+						<li><a href="#" class="color-white" title="Market"><span class="fa fa-money"></span> Market</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -127,12 +120,14 @@
 											</div>
 										</div>
 										<div class="comment" ng-repeat="friendRequest in friendRequests">
-											<a href="#" class="profile-pic"><!-- <span class="fa fa-user fa-2x"></span> --><img ng-src="<spring:message code="domain.component.prefix"/>profileImage?image={{friendRequest.profilePic}}"/></a>
+											<a href="#" class="profile-pic">
+												<!-- <span class="fa fa-user fa-2x"></span> -->
+												<img ng-src="profileImage?image={{friendRequest.profilePic}}" />
+											</a>
 											<p>
-												<a href="<spring:message code="domain.component.prefix"/>profile/{{friendRequest.timelineId}}" class="member-name"><strong>{{friendRequest.userName}}</strong></a>
+												<a href="profile/{{friendRequest.timelineId}}" class="member-name"><strong>{{friendRequest.userName}}</strong></a>
 											</p>
-											<a class="btn btn-primary color-white"
-												ng-click="confirmFriendRequest(friendRequest.emailId)">Accept</a> <a
+											<a class="btn btn-primary color-white" ng-click="confirmFriendRequest(friendRequest.emailId)">Accept</a> <a
 												class="btn btn-default">Not Now</a>
 										</div>
 										<!-- New Friend Added -->
@@ -143,8 +138,7 @@
 											</div>
 										</div>
 										<div class="comment">
-											<a href="#" class="profile-pic"><span class="fa fa-user fa-2x"></span></a> <a href="#"
-												class="member-name"><strong>Oliver</strong></a>
+											<a href="#" class="profile-pic"><span class="fa fa-user fa-2x"></span></a> <a href="#" class="member-name"><strong>Oliver</strong></a>
 										</div>
 									</div>
 								</div>
@@ -168,12 +162,12 @@
 												<a href="#">Mark as Read</a> <a href="#">Settings</a>
 											</div>
 										</div>
-										<a href="javascript:void(0)" class="comment unread"
-											ng-repeat="frCnfNotify in frCnfNotifys"> <span class="profile-pic"><span
-												class="fa fa-user fa-2x"></span></span> <span class="notifi-msg"><span
-												class="member-name"><strong>{{frCnfNotify.firstName+"
-														"+frCnfNotify.lastName}}</strong></span> <span class="msg">accepted friend request.</span></span> <span
-											class="notifi-img"><!-- <img src="images/box.jpg" /> --></span>
+										<a href="javascript:void(0)" class="comment unread" ng-repeat="frCnfNotify in frCnfNotifys"> <span
+											class="profile-pic"><span class="fa fa-user fa-2x"></span></span> <span class="notifi-msg"><span
+												class="member-name"><strong>{{frCnfNotify.firstName+" "+frCnfNotify.lastName}}</strong></span> <span
+												class="msg">accepted friend request.</span></span> <span class="notifi-img">
+												<!-- <img src="images/box.jpg" /> -->
+										</span>
 										</a>
 									</div>
 								</div>
@@ -191,27 +185,26 @@
 			<div class="col-md-4">
 				<nav class="top-navigation right-nav">
 					<ul class="text-right">
-						<li><a href="#" class="color-white">Welcome ${userInfo.firstName} <span
-								class="profile-pic"><i class="fa fa-user"></i></span></a>
+						<li><a href="#" class="color-white">Welcome ${userInfo.firstName} <span class="profile-pic"><i
+									class="fa fa-user"></i></span></a>
 							<div class="message pop-up panel panel-default">
 								<div class="panel-content">
 									<div class="comments">
-										<a href="javascript:void(0)" class="comment unread text-right">Thor</a> <a
-											href="javascript:void(0)" class="comment unread text-right">Thor</a>
+										<a href="javascript:void(0)" class="comment unread text-right">Thor</a> <a href="javascript:void(0)"
+											class="comment unread text-right">Thor</a>
 										<div class="divider"></div>
-										<a href="javascript:void(0)" class="comment unread text-right">Thor</a> <a
-											href="javascript:void(0)" class="comment unread text-right">Thor</a>
+										<a href="javascript:void(0)" class="comment unread text-right">Thor</a> <a href="javascript:void(0)"
+											class="comment unread text-right">Thor</a>
 										<div class="divider"></div>
-										<a href="javascript:void(0)" class="comment unread text-right">Thor</a> <a
-											href="javascript:void(0)" class="comment unread text-right">Thor</a>
+										<a href="javascript:void(0)" class="comment unread text-right">Thor</a> <a href="javascript:void(0)"
+											class="comment unread text-right">Thor</a>
 										<div class="divider"></div>
-										<a href="javascript:void(0)" class="comment unread text-right">Thor</a> <a
-											href="javascript:void(0)" class="comment unread text-right">Thor</a>
+										<a href="javascript:void(0)" class="comment unread text-right">Thor</a> <a href="javascript:void(0)"
+											class="comment unread text-right">Thor</a>
 									</div>
 								</div>
 							</div></li>
-						<li><a href="<spring:message code="domain.prefix"/>logout" class="color-white">Sign
-								Out</a></li>
+						<li><a href="<spring:message code="domain.prefix"/>logout" class="color-white">Sign Out</a></li>
 						<li><a href="#" class="color-white">Wish List</a>
 							<div class="pop-up panel-body"></div></li>
 						<li><a href="#" class="color-white">English <span class="fa fa-language"></span></a>
@@ -238,8 +231,7 @@
 			<div class="col-md-3 col-sm-2 col-xs-3">
 				<nav class="top-navigation cart-nav">
 					<ul class="text-right">
-						<li><a href="#" class="color-white"><span class="cart">0</span><i
-								class="fa fa-cart-plus fa-3x"></i></a></li>
+						<li><a href="#" class="color-white"><span class="cart">0</span><i class="fa fa-cart-plus fa-3x"></i></a></li>
 					</ul>
 				</nav>
 			</div>
@@ -251,19 +243,13 @@
 				<div class="col-md-12">
 					<nav class="main-navigation">
 						<ul>
-							<li><a
-								href="<spring:message code="domain.component.prefix"/>home"><span
-									class="fa fa-home"></span> HOME</a></li>
-							<li><a href="<spring:message code="domain.component.prefix"/>about-us/"><span
-									class="fa fa-info-circle"></span> ABOUT</a></li>
-							<li><a href="<spring:message code="domain.component.prefix"/>gallery/"><span
-									class="fa fa-image"></span> GALLERY</a></li>
-							<li><a href="<spring:message code="domain.component.prefix"/>friends/"><span
-									class="fa fa-user"></span> FRIENDS</a></li>
-							<li><a href="<spring:message code="domain.component.prefix"/>profile/${userInfo.timelineId}"><span class="fa fa-newspaper-o"></span> TIMELINE</a></li>
+							<li><a href="home"><span class="fa fa-home"></span> HOME</a></li>
+							<li><a href="about-us/"><span class="fa fa-info-circle"></span> ABOUT</a></li>
+							<li><a href="gallery/"><span class="fa fa-image"></span> GALLERY</a></li>
+							<li><a href="friends/"><span class="fa fa-user"></span> FRIENDS</a></li>
+							<li><a href="profile/${userInfo.timelineId}"><span class="fa fa-newspaper-o"></span> TIMELINE</a></li>
 							<li><a href="#"><span class="fa fa-rss"></span> BLOG & FORUMS</a></li>
-							<li><a href="<spring:message code="domain.component.prefix"/>task/"><span
-									class="fa fa-tasks"></span> TASKS</a></li>
+							<li><a href="task/"><span class="fa fa-tasks"></span> TASKS</a></li>
 						</ul>
 					</nav>
 					<div class="mobile-nav">

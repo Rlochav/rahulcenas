@@ -1,5 +1,7 @@
 package com.ceostocks.mvc.homePage;
 
+import java.math.BigDecimal;
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,6 +27,8 @@ public class DoLogin extends CeoStocksWebHandler {
 
 	@Autowired
 	private UserApplication userApplication;
+	@Autowired
+	private UserInfo userInfo;
 
 	private ThreadLocal<String> errorMessage;
 
@@ -35,6 +39,7 @@ public class DoLogin extends CeoStocksWebHandler {
 		try {
 			String ipAddress = getClientIpAddr(getRequest());
 			UserInfo userInfo = userApplication.doLogin(getRequestParam("userId"), getRequestParam("password"), ipAddress);
+			this.userInfo.setUserIndex(userInfo.getUserIndex());;
 			modelMap.addAttribute(USER_INFO_SESSION, userInfo);
 		} catch (Exception e) {
 			errorMessage.set(e.getMessage());

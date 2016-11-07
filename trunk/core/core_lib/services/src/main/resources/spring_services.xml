@@ -21,6 +21,8 @@
 	<bean id="notificationService" class="com.ceostocks.services.notification.NotificationServiceImpl"></bean>
 	
 	<bean id="socialService" class="com.ceostocks.services.social.SocialServiceImpl"></bean>
+	
+	<bean id="cmsService" class="com.ceostocks.services.cms.CmsServiceImpl"></bean>
 
 
 	<!-- <bean id="emailProducer" class="com.ceostocks.services.jms.EmailProducer"></bean> 

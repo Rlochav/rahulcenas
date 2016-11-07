@@ -32,4 +32,9 @@
 	
 	<bean id="groupsRepository" class="com.ceostocks.model.social.entity.GroupsRepositoryImpl"></bean>
 	<bean id="groupsUserLinkRepository" class="com.ceostocks.model.social.entity.GroupsUserLinkRepositoryImpl"></bean>
+	
+	<bean id="cmsFixedLocationContentRepository" class="com.ceostocks.model.cms.CmsFixedLocationContentRepositoryImpl"></bean>
+	<bean id="cmsPageRepository" class="com.ceostocks.model.cms.CmsPageRepositoryImpl"></bean>
+	<bean id="cmsUrlRepository" class="com.ceostocks.model.cms.CmsUrlRepositoryImpl"></bean>
+	<bean id="cmsUrlCategoryRepository" class="com.ceostocks.model.cms.CmsUrlCategoryRepositoryImpl"></bean>
 </beans>

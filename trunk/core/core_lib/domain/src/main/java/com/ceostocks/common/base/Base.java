@@ -12,7 +12,7 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
 @MappedSuperclass
-public class Base implements Serializable {
+public abstract class Base implements Serializable {
 
 	/**
 	 * 

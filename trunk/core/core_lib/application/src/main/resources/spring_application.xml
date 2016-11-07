@@ -20,6 +20,8 @@
 	<bean id="postApplication" class="com.ceostocks.application.social.PostApplicationImpl"></bean>
 	<bean id="notificationApplication" class="com.ceostocks.application.notification.NotificationApplicationImpl"></bean>
 	<bean id="socialApplication" class="com.ceostocks.application.social.SocialApplicationImpl"></bean>
+	
+	<bean id="cmsApplication" class="com.ceostocks.application.cms.CmsApplicationImpl"></bean>
 
 	<aop:config>
 		<aop:pointcut expression="@annotation(com.ceostocks.common.annotation.CeoStocksDefaultTxn)" id="ceoStocksDefaultTxn" />

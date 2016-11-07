@@ -10,7 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import com.ceostocks.common.dto.UserInfo;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-public class CeoStocksWebHandler implements Serializable {
+public abstract class CeoStocksWebHandler implements Serializable {
 
 	/**
 	 * 

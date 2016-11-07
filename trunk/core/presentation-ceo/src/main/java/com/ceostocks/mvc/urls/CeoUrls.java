@@ -74,4 +74,20 @@ public class CeoUrls {
 	 * Notification
 	 */
 	public static final String CEO_JSON_GET_NOTIFICATION = "jsonGetNotification";
+
+	/**
+	 * CMS
+	 */
+	public static final String CEO_CMS_CONTENT_LIST = "cmsContentList";
+	public static final String CEO_CMS_PAGE_LIST = "cmsPageList";
+	public static final String CEO_CMS_PAGE_CONTENT_EDITOR = "cmsPageContentEditor";
+	public static final String CEO_CMS_URL_LIST = "cmsUrlList";
+	public static final String CEO_CMS_URL_MASTER = "cmsUrlMaster";
+	public static final String CEO_CMS_MENU_LIST = "cmsMenuList";
+	public static final String CEO_CMS_MENU_MASTER = "cmsMenuMaster";
+	public static final String CEO_CMS_URL_CATEGORY_MASTER = "cmsUrlCategoryMaster";
+	public static final String CEO_CMS_GET_CMS_URLS = "getCmsUrl";
+	public static final String CEO_CMS_GET_CMS_URLS_CATEGORY = "getCmsUrlsCategory";
+	public static final String CEO_CMS_SAVE_CMS_URL_CATEGORY = "saveCmsUrlCategory";
+	
 }
