@@ -1,0 +1,222 @@
+body
+{
+	padding: 0px;
+	margin: 0px;
+}
+input:hover,input
+{
+	outline:none;
+	border:1px #d6ddca solid;
+}
+@font-face
+{
+font-family: myfont;
+src: url('../resources/gnuolane_free.ttf');     
+}
+.head
+{
+	height: 50px;
+	padding-top: 10px;
+	position:relative;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	background: #5e6733;
+	box-shadow: 2px 2px 5px #888;
+	color: #d5d7ca;
+	font-size: 34px;
+	font-family:helvetica;
+	text-align: center;
+}
+.divinput
+{
+	position: relative;
+	top:3px;
+	float: left;
+	width: 15%;
+	padding-left:1.56%;
+	height: 35px;
+	padding-top: 10px;
+	background: #e0e3df;
+	font-family: myfont;
+	font-size: 15px;
+	border-bottom:1px #5e6733 solid;	
+	z-index:100;
+	
+}
+.input,.input:hover
+{
+	height: 25px;
+	width: 70%;
+	font-size:14px;
+	border:1px #9aa17a solid;
+	outline:none;
+	font-weight: bold;
+	color: #797f5c;
+	overflow: hidden;
+	 -webkit-appearance: none;
+	background: url(../images/dropdownbg.png) no-repeat right #e0e3df;;
+}
+.divinputleft
+{
+	padding-top:5px;
+	width: auto;
+	color: #424729;
+
+
+}
+.divinputleft div
+{
+	width: 21%;
+	float: left;
+	overflow: hidden;
+	
+}
+.inputtitle
+{
+	width: 30%;
+	float: left;
+	overflow: hidden;
+
+}
+#inputlandmark,#inputlocation
+{
+	width: 60%;
+	background: #ecefe7;
+	display: none;
+}
+#listing,#status,#price
+{
+	width: 60%;
+	height: 25px;
+}
+#price
+{
+	background: #e0e3df;
+	height: 20px;
+	border: 1px solid #9aa17a;
+}
+
+#latlng
+{
+	padding-top:10px;
+	height: 25px;
+	padding-bottom: 5px;
+	color: #424729;
+}
+#latlng div
+{
+	width: 15%;
+	float: left;
+	overflow: hidden;
+}
+
+#latlng input
+{
+	width:25%;
+	float: left;
+	height: 20px;
+	border: 1px solid #9aa17a;
+	background: #e0e3df;
+}
+
+#amnt
+{
+	width:200px;
+	height:25px;
+	background: #e0e3df;
+	padding-top: 3px;
+	font-family: helvetica;
+	font-size: 15px;
+	border: 1px solid #a0a991;
+}
+
+#amnt:hover
+{
+	outline: none;
+}
+#amnt select
+{
+	padding-top: 5px;
+}
+#dsr
+{
+	width:200px;
+	height:80px;
+	background: #e0e3df;
+	padding-top: 2px;
+	font-family: helvetica;
+	font-size: 15px;
+	border: 1px solid #a0a991;
+
+}
+#submit
+{
+	width:60px;
+	height:30px;
+	background: #e0e3df;
+	padding-top: 2px;
+	font-family: helvetica;
+	font-size: 15px;
+	border: 1px solid #a0a991;
+
+}
+.divleft
+{
+	position:relative;
+	float:left;
+	font-family: myfont;
+	width:17.9%;
+	padding-left:2%;
+	padding-top: 25px;
+	height:500px;
+	background: #e0e3df;
+	border-right:1px green solid;
+}
+#gmap
+{
+	position:relative;
+	float:right;
+	width:80%;
+	height:500px;
+	background:white;
+}
+#uploadform
+{
+	position:fixed;
+	top: 120px;
+	padding-left: 20px;
+	width: 200px;
+}
+.noshow
+{
+	display: none;
+}
+#overlapfile
+{
+	width:240px;
+    height:33px;
+    position: relative;
+    top: -20px;
+    background: url('../images/upload.png') no-repeat;
+}
+#filenum
+{
+	position: relative;
+	left: 55px;
+	border: 0px solid red;
+	background: #e0e3df;
+	cursor: pointer;
+}
+#myfile
+{
+	position:relative;
+    width:240px;
+    height:26px;
+    text-align: right;
+    -moz-opacity:0 ;
+    filter:alpha(opacity: 0);
+    opacity: 0;
+    z-index: 2;
+    cursor: pointer;
+}

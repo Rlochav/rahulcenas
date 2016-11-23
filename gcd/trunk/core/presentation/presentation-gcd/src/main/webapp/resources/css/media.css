@@ -1,0 +1,268 @@
+@media ( max-width :210px) {
+	.social {
+		padding: 0px;
+		float: right;
+		width: 100%;
+	}
+}
+
+@media screen and (min-width:210px) and (max-width: 480px) {
+	.logo {
+		margin: 0px 0px 0px 8% ! important;
+	}
+	.slider {
+		width: 64% ! important;
+		margin: 6px 2% 6px 0px ! important;
+		height: auto;
+	}
+	.wrap {
+		width: 50% ! important;
+		position: absolute;
+		margin-left: 0px;
+		height: auto;
+	}
+	.right_tabs {
+		margin-right: 0%;
+	}
+	.tagline-mobi {
+		font-size: 9px;
+		width: 95.5%;
+	}
+	.left {
+		float: none;
+		width: 95%;
+		margin: 5px auto;
+	}
+	.fflip {
+		display: block;
+		max-height: 14px;
+	}
+	.right .moduletable-drive h3 {
+		font-size: 12px;
+		line-height: 20px;
+	}
+	.moduletable-deli h3 {
+		font-size: 12px;
+		line-height: 20px;
+	}
+	.moduletable ul,.custom-deli,.right-box-1,.left-first-box {
+		display: none;
+	}
+	.mid {
+		width: 95% !important;
+		margin: 10px auto !important;
+		float: none;
+	}
+	.merchantDetail {
+		width: 95% !important;
+		margin: 0px auto !important;
+		float: none;
+	}
+	.main-content #title {
+		background-size: 100% 100% !important;
+		width: 69% !important;
+		height: 20px !important;
+		margin-top: -49px !important;
+	}
+	.main-content {
+		margin-top: 0px !important;
+		margin-bottom: 10px !important;
+		padding-bottom: 12px !important;
+	}
+	.deals_right {
+		width: 88%;
+		float: left;
+		line-height: 19px;
+		padding: 2px 14px;
+	}
+	.right {
+		width: 95%;
+		margin: 5px auto;
+		float: none;
+		overflow: hidden;
+	}
+	.main-menu ul li a {
+		font-size: 12px;
+		font-family: arial;
+		padding: 1px 3px 0px;
+	}
+	.bottom {
+		font-size: 10px;
+	}
+	.copyright {
+		margin-top: 17px;
+	}
+	.main-menu {
+		border-bottom: none;
+		width: 100%;
+		text-align: center;
+		margin: 0 0 0 0px;
+		padding-top: 11px;
+		float: left;
+	}
+	.main-menu ul {
+		margin: 0px 0px 0px 0px;
+	}
+	.right .moduletable-deli {
+		margin-top: 0px;
+	}
+	.footer-left {
+		border-bottom: none;
+		width: 44%;
+		text-align: center;
+		margin: 0 0 0 0%;
+	}
+	.footer-left ul li a {
+		font-size: 11px !important;
+		padding: 1px 4px 10px !important;
+		line-height: 7px !important;
+	}
+}
+
+@media ( max-width : 768px) {
+	.share,.rate,.subscribe {
+		width: 100%;
+	}
+	.social-icon {
+		float: right;
+	}
+	.bottom {
+		background-size: 98% 100%;
+	}
+	.admin-container #title {
+		font-size: 16px;
+	}
+}
+
+@media ( max-width : 900px) {
+	.slider {
+		width: 60%;
+	}
+	.wrap {
+		width: 45%;
+	}
+	.social {
+		position: relative;
+		width: 100%;
+		top: 8px;
+	}
+	.left {
+		margin: 0px 5px 0px 11px;
+	}
+	.social-icon {
+		float: left;
+		margin: 0px 0px 0px 3%;
+	}
+	.login {
+		float: right;
+		margin: 3px 0px 0px 0px;
+	}
+	.left .moduletable h4 {
+		font-size: 12px;
+		line-height: 21px;
+	}
+	.right .moduletable-drive h3 {
+		font-size: 12px;
+		line-height: 21px;
+	}
+	.right .moduletable-deli h3 {
+		font-size: 12px;
+		line-height: 21px;
+	}
+	.logo {
+		width: 20%;
+		height: auto;
+		float: left;
+	}
+	.mobile_nav,.modulet {
+		display: block;
+	}
+	.icon_menu ul li {
+		text-align: center;
+		margin-right: 11px;
+		padding: 5px;
+	}
+	.icon_menu ul li a img,.icon_menu ul li {
+		display: none;
+	}
+	.tab-menu {
+		display: block;
+	}
+	.icon_menu {
+		width: 92%;
+		padding-bottom: 18px;
+	}
+	.tagline {
+		display: none;
+	}
+	.tagline-mobi {
+		display: block;
+		color: #ffffff;
+	}
+	.mid {
+		width: 58%;
+		margin-left: 5px;
+		margin-right: 5px;
+	}
+	.merchantDetail {
+		width: 78%;
+	}
+	.admin-container {
+		width: 98%;
+	}
+	.main-content #title {
+		width: 37.45%;
+	}
+	.footer-left {
+		width: 51%;
+		margin: 0 0 0 3%;
+	}
+	.footer-left ul li a {
+		font-size: 13px;
+		padding: 0px;
+	}
+	.copyright {
+		width: 38%;
+	}
+	.form_fields,.address-field .form_fields {
+		float: left;
+		width: 100%;
+		padding: 4px 0px;
+	}
+	.address-field .form_fields label {
+		width: 40%;
+	}
+}
+
+@media screen and (min-width:900px) and (max-width: 1024px) {
+	.upper-header {
+		margin-bottom: 7px;
+	}
+	.logo {
+		width: 20%;
+		height: auto;
+		float: left;
+	}
+	.mid {
+		margin-left: 6px;
+		margin-right: 4px;
+	}
+	.icon_menu ul li {
+		margin: 0px 6px 0px 0px;
+	}
+	.bottom {
+		background-size: 95% 100%;
+	}
+	.footer-left {
+		margin: 0 0 0 4%;
+	}
+	.footer-left ul li {
+		padding: 0px 0px;
+	}
+}
+
+@media screen and (min-width:1025px) and (max-width: 1300px) {
+	.icon_menu ul li {
+		margin: 0px 6px 0px 0px;
+	}
+}
