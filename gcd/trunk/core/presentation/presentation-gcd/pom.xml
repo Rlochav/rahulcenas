@@ -18,6 +18,6 @@
 	</dependencies>
 	
 	<build>
-		<finalName>presentation-ceo</finalName>
+		<finalName>presentation-gcd</finalName>
 	</build>
 </project>
