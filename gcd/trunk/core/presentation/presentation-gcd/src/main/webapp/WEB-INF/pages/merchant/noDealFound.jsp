@@ -1,21 +1,28 @@
-<%-- <%@include file="../common/taglibs.jsp"%>
+<%@include file="../common/taglibs.jsp"%>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title><spring:message code="common.html.000001"></spring:message></title>
 
-<script type="text/javascript" src="<c:url value='/resources/js/jquery-2.0.3.js'/>"></script>
-<link type="text/css" rel="stylesheet" href="<c:url value='/resources/css/template.css'/>">
-<link type="text/css" rel="stylesheet" href="<c:url value='/resources/css/rating.css'/>">
-<link rel="shortcut icon" href="<c:url value='resources/images/icon.png'/>" />
-<script type="text/javascript" src="<c:url value='/resources/js/CommonFunction.js'/>"></script>
-<link href="<c:url value='/resources/css/jquery-image-slider.css'/>" rel="stylesheet" type="text/css" />
+<script type="text/javascript"
+	src="<c:url value='/resources/js/jquery-2.0.3.js'/>"></script>
+<link type="text/css" rel="stylesheet"
+	href="<c:url value='/resources/css/template.css'/>">
+<link type="text/css" rel="stylesheet"
+	href="<c:url value='/resources/css/rating.css'/>">
+<link rel="shortcut icon"
+	href="<c:url value='resources/images/icon.png'/>" />
+<script type="text/javascript"
+	src="<c:url value='/resources/js/CommonFunction.js'/>"></script>
+<link href="<c:url value='/resources/css/jquery-image-slider.css'/>"
+	rel="stylesheet" type="text/css" />
 <script src="<c:url value='/resources/js/js-image-slider.js'/>"></script>
 
-<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
+<script
+	src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
 <style>
-html,body,#map-canvas {
+html, body, #map-canvas {
 	height: 100%;
 	margin: 0px;
 	padding: 0px
@@ -85,8 +92,11 @@ html,body,#map-canvas {
 
 <!-- Place this tag in your head or just before your close body tag. -->
 <script src="https://apis.google.com/js/platform.js" async defer></script>
-<script src='http://assets.pinterest.com/js/pinit.js' type='text/javascript' />
-<script src="https://apis.google.com/js/client.js?onload=handleClientLoad" gapi_processed="true"></script>
+<script src='http://assets.pinterest.com/js/pinit.js'
+	type='text/javascript' />
+<script
+	src="https://apis.google.com/js/client.js?onload=handleClientLoad"
+	gapi_processed="true"></script>
 
 <script src="<c:url value='/resources/js/googleLogin.js'/>"></script>
 <script src="<c:url value='/resources/js/facebookLogin.js'/>"></script>
@@ -131,8 +141,10 @@ html,body,#map-canvas {
 	  	ga('newTracker.send', 'pageview');
 	  </c:if>
 </script>
-	<input type="hidden" style="display: none;" id="latitude" name="latitude" value="${dealzDTO.latitude}" />
-	<input type="hidden" style="display: none;" id="longitude" name="longitude" value="${dealzDTO.longitude}" />
+	<input type="hidden" style="display: none;" id="latitude"
+		name="latitude" value="${dealzDTO.latitude}" />
+	<input type="hidden" style="display: none;" id="longitude"
+		name="longitude" value="${dealzDTO.longitude}" />
 	<div id="wrapper">
 		<%@include file="../common/header.jsp"%>
 		<div class="tagline">
@@ -150,19 +162,28 @@ html,body,#map-canvas {
 		<!-- Menu section end here -->
 		<div class="cent center-both no-right">
 			<form action="../../searchQuery">
-				<div style="height: 25px; width: 185px; background: rgb(37, 70, 87); border-radius: 6px;">
-					<input name="query" class="searchfield" type="text" placeholder="Search" style="margin: 1px 0 0 4px;" />
+				<div
+					style="height: 25px; width: 185px; background: rgb(37, 70, 87); border-radius: 6px;">
+					<input name="query" class="searchfield" type="text"
+						placeholder="Search" style="margin: 1px 0 0 4px;" />
 				</div>
 				<div style="margin: -25px 0px 0 186px;">
-					<input type="submit" name="searchBtn" id="searchBtn" class="mediumBtn" value="Search" />
+					<input type="submit" name="searchBtn" id="searchBtn"
+						class="mediumBtn" value="Search" />
 				</div>
 			</form>
 			<c:if test="${socialProfileDTO.emailId==null}">
 				<div style="margin: -32px 0 0 454px;" id="facebookLoginBtn">
-					<a href="javascript:void(0);" onclick="loginFacebook();"><img alt="facebook login" src="<c:url value='/resources/images/fb-login.png'/>" width="100" height="35" /></a>
+					<a href="javascript:void(0);" onclick="loginFacebook();"><img
+						alt="facebook login"
+						src="<c:url value='/resources/images/fb-login.png'/>" width="100"
+						height="35" /></a>
 				</div>
 				<div style="margin-top: -41px; float: right;" id="googleSignInBtn">
-					<a href="javascript:void(0);" id="googlelogin"><img alt="facebook login" src="<c:url value='/resources/images/gSignIn.png'/>" width="100" height="42" /></a>
+					<a href="javascript:void(0);" id="googlelogin"><img
+						alt="facebook login"
+						src="<c:url value='/resources/images/gSignIn.png'/>" width="100"
+						height="42" /></a>
 				</div>
 			</c:if>
 			<div class="main-content">
@@ -171,7 +192,9 @@ html,body,#map-canvas {
 				<div id="deal_content">
 					<div style="margin: 5px;">
 						<h3 class="msg">
-							<em>We're sorry, you've come upon a page that doesn't exist or has been permanently moved. Please use our site search or navigation features to find the content on our site. </em>
+							<em>We're sorry, you've come upon a page that doesn't exist
+								or has been permanently moved. Please use our site search or
+								navigation features to find the content on our site. </em>
 						</h3>
 					</div>
 				</div>
@@ -187,4 +210,3 @@ html,body,#map-canvas {
 	<!-- wrapper end here -->
 </body>
 </html>
- --%>
