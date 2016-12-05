@@ -1,4 +1,4 @@
- <div class="left">
+<%--  <div class="left">
 	<div class="moduletable">
 		<div id="deals_by_map">
 			<h4>Deal By Map</h4>
@@ -49,4 +49,23 @@
 			</div>
 		</div>
 	</div>
+</div> --%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
+<div class="dcjq-vertical-mega-menu">
+	<ul id="mega-1" class="menu">
+		<li id="menu-item-0"><a class="dc-mega">Categories </a></li>
+		<c:set var="count" value="1" scope="page" />
+		<c:forEach var="categoryDTO" items="${categoryDTO}">
+			<c:set var="categoryName" value="${categoryDTO.categoryName}"/>
+			<c:set var="categoryName1" value="${fn:split(categoryName, ' ')}"/>
+			<c:set var="categoryName2" value="${fn:join(categoryName1, '-')}"/>
+			<c:set var="categoryName3" value="${fn:split(categoryName2, '/')}"/>
+			<c:set var="categoryName4" value="${fn:join(categoryName3, '-')}"/>
+			<li id="menu-item-${count}"><a href="http://localhost:8081/presentation-gcd/admin/${categoryName4}-${categoryDTO.categoryId}">${categoryDTO.categoryName}(${categoryDTO.counts})</a></li>
+        <c:set var="count" value="${count + 1}" scope="page"/>
+        </c:forEach>     
+		<li id="menu-item-13" class="view-all"><a class="dc-mega"
+			href="#"> View all Categories ></a></li>
+	</ul>
 </div>
