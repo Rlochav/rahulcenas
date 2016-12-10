@@ -23,6 +23,7 @@ public class GcdMetaDTO implements Serializable {
 	private String pageTitle;
 	private String elementId;
 	private String elementClass;
+	private String breakGroup;
 	private List<GcdMetaDTO> gcdMetaDTOs;
 
 	/**
@@ -213,7 +214,8 @@ public class GcdMetaDTO implements Serializable {
 	}
 
 	/**
-	 * @param elementId the elementId to set
+	 * @param elementId
+	 *            the elementId to set
 	 */
 	public void setElementId(String elementId) {
 		this.elementId = elementId;
@@ -227,10 +229,26 @@ public class GcdMetaDTO implements Serializable {
 	}
 
 	/**
-	 * @param elementClass the elementClass to set
+	 * @param elementClass
+	 *            the elementClass to set
 	 */
 	public void setElementClass(String elementClass) {
 		this.elementClass = elementClass;
+	}
+
+	/**
+	 * @return the breakGroup
+	 */
+	public String getBreakGroup() {
+		return breakGroup;
+	}
+
+	/**
+	 * @param breakGroup
+	 *            the breakGroup to set
+	 */
+	public void setBreakGroup(String breakGroup) {
+		this.breakGroup = breakGroup;
 	}
 
 }
