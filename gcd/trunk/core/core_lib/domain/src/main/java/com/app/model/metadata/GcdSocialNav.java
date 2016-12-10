@@ -37,6 +37,8 @@ public class GcdSocialNav implements Serializable {
 	private String elementId;
 	@Column(name = "ElementClass")
 	private String elementClass;
+	@Column(name = "BreakGroup")
+	private Integer breakGroup;
 
 	/**
 	 * @return the isEditable
@@ -186,6 +188,21 @@ public class GcdSocialNav implements Serializable {
 	 */
 	public void setElementClass(String elementClass) {
 		this.elementClass = elementClass;
+	}
+
+	/**
+	 * @return the breakGroup
+	 */
+	public Integer getBreakGroup() {
+		return breakGroup;
+	}
+
+	/**
+	 * @param breakGroup
+	 *            the breakGroup to set
+	 */
+	public void setBreakGroup(Integer breakGroup) {
+		this.breakGroup = breakGroup;
 	}
 
 }
