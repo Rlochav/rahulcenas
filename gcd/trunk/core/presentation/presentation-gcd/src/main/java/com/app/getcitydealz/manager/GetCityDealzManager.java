@@ -1,5 +1,6 @@
 package com.app.getcitydealz.manager;
 
+import static java.lang.String.valueOf;
 import static org.springframework.util.CollectionUtils.isEmpty;
 import static org.springframework.util.StringUtils.isEmpty;
 
@@ -2182,6 +2183,7 @@ public class GetCityDealzManager {
 					dto.setShowOnPage(gsn.getShowOnPage() == 1 ? "Yes" : "No");
 					dto.setElementId(gsn.getElementId());
 					dto.setElementClass(gsn.getElementClass());
+					dto.setBreakGroup(valueOf(gsn.getBreakGroup()));
 					if (gcdMetaDTO.getGcdMetaDTOs() == null)
 						gcdMetaDTO.setGcdMetaDTOs(new ArrayList<GcdMetaDTO>());
 					gcdMetaDTO.getGcdMetaDTOs().add(dto);

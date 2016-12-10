@@ -5,7 +5,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>CEO Stocks</title>
-<link type="text/css" rel="stylesheet" href="<c:url value='/resources/css/imart/style.css'/>"/>
+<link type="text/css" rel="stylesheet" href="<c:url value='/resources/css/imart/style.css'/>" />
 <script src="<c:url value='/resources/js/imart/jquery.min.js'/>"></script>
 <script src="<c:url value='/resources/js/imart/home.js'/>" type="text/javascript"></script>
 </head>
@@ -27,18 +27,30 @@
 						<li><a href="#" class="slider-post-buy-requirement"><img
 								src="resources/images/imart/pbr-1.1.jpg" alt="Post buy Requirement"
 								title="Post buy Requirement" width="1033" height="450" /></a></li>
-						<li><a href="#"><img src="resources/images/imart/trending_now.jpg"
-								alt="Trending Now" title="Trending Now" usemap="#Map"
-								width="1033" height="450" /></a></li>
+						<li><a href="#"><img src="resources/images/imart/trending_now.jpg" alt="Trending Now"
+								title="Trending Now" usemap="#Map" width="1033" height="450" /></a></li>
 						<li><a href="#"><img src="resources/images/imart/prem_brand_new-1.1.jpg"
-								alt="Top Brands" title="Top Brands" usemap="#MapPre"
-								width="1033" height="450" /></a></li>
+								alt="Top Brands" title="Top Brands" usemap="#MapPre" width="1033" height="450" /></a></li>
 					</ul>
 					<div id="bx-pager">
-						<a data-slide-index="0" href="#">Buy on Ceo Stock</a> <a
-							data-slide-index="1" href="#" class="slider-post-req">Post
-							Buy Requirement</a> <a data-slide-index="2" href="#">Trending Now</a>
-						<a data-slide-index="3" href="#">Top Brands</a>
+						<%
+						if (dto2 != null && !CollectionUtils.isEmpty(dto2.getGcdMetaDTOs())) {
+							for (GcdMetaDTO g : dto2.getGcdMetaDTOs()) {
+								String img = null;
+								if (g.getImagePath() != null) {
+									img = g.getImagePath().replace(".", "_do_custom_separator_");
+								}
+								if (g.getShowOnPage().equals("Yes")) {
+					%>
+						<a data-slide-index="<%=g.getAlign()%>" class="<%=g.getElementClass()%>" href="#"><%=g.getImageAlt()%></a>
+						<%
+						}
+							}
+						}
+					%>
+						<!-- <a data-slide-index="1" href="#"
+							class="slider-post-req">Post Buy Requirement</a> <a data-slide-index="2" href="#">Trending
+							Now</a> <a data-slide-index="3" href="#">Top Brands</a> -->
 					</div>
 					<map name="Map">
 						<area shape="rect" coords="2,1,201,227" href="#" alt="">
@@ -51,48 +63,35 @@
 						<area shape="rect" coords="427,235,601,293" href="#" alt="">
 					</map>
 					<map name="MapPre">
-						<area shape="rect" coords="2,0,201,151" href="#" target="_blank"
-							alt="Benq">
-						<area shape="rect" coords="200,2,419,151" href="#" target="_blank"
-							alt="JCB">
-						<area shape="rect" coords="417,0,618,150" href="#" target="_blank"
-							alt="Finolex">
-						<area shape="rect" coords="618,0,834,151" href="#" target="_blank"
-							alt="ais">
-						<area shape="rect" coords="832,0,1031,150" href="#"
-							target="_blank" target="_blank" alt="Fenesta">
-						<area shape="rect" coords="0,151,199,301" href="#" target="_blank"
-							alt="somany">
-						<area shape="rect" coords="834,150,1034,299" href="#"
-							target="_blank" alt="johnson">
-						<area shape="rect" coords="-7,300,200,450" href="#"
-							target="_blank" alt="Widex">
-						<area shape="rect" coords="199,301,411,451" href="#"
-							target="_blank" alt="Liugong">
-						<area shape="rect" coords="411,302,614,453" href="#"
-							target="_blank" alt="Eicher">
-						<area shape="rect" coords="612,300,835,459" href="#"
-							target="_blank" alt="Amplifon">
-						<area shape="rect" coords="835,299,1030,450" href="#"
-							target="_blank" alt="Mahindra Techmaster">
+						<area shape="rect" coords="2,0,201,151" href="#" target="_blank" alt="Benq">
+						<area shape="rect" coords="200,2,419,151" href="#" target="_blank" alt="JCB">
+						<area shape="rect" coords="417,0,618,150" href="#" target="_blank" alt="Finolex">
+						<area shape="rect" coords="618,0,834,151" href="#" target="_blank" alt="ais">
+						<area shape="rect" coords="832,0,1031,150" href="#" target="_blank" target="_blank"
+							alt="Fenesta">
+						<area shape="rect" coords="0,151,199,301" href="#" target="_blank" alt="somany">
+						<area shape="rect" coords="834,150,1034,299" href="#" target="_blank" alt="johnson">
+						<area shape="rect" coords="-7,300,200,450" href="#" target="_blank" alt="Widex">
+						<area shape="rect" coords="199,301,411,451" href="#" target="_blank" alt="Liugong">
+						<area shape="rect" coords="411,302,614,453" href="#" target="_blank" alt="Eicher">
+						<area shape="rect" coords="612,300,835,459" href="#" target="_blank" alt="Amplifon">
+						<area shape="rect" coords="835,299,1030,450" href="#" target="_blank"
+							alt="Mahindra Techmaster">
 					</map>
 					<div id="blfrmcnt" style="display: none;">
-						<div id="buy_lead_gen_form" class="t12_frm_area"
-							style="display: none;">
+						<div id="buy_lead_gen_form" class="t12_frm_area" style="display: none;">
 							<div id="t21_maindiv">
 								<div id="t21_frm_area" style="">
 									<div id="t21_head"></div>
 									<form name="t21_eto_bl_form" id="t21_eto_bl_form"
-										onsubmit="return callIfGlobalJSLoaded_isq(temp21Obj, 'checkData_isq');"
-										method="post" action="">
+										onsubmit="return callIfGlobalJSLoaded_isq(temp21Obj, 'checkData_isq');" method="post"
+										action="">
 										<div class="relt">
-											<div
-												style="position: absolute; top: -20px; right: 43%; display: none"
-												name="error_title" id="t21_error_title">
+											<div style="position: absolute; top: -20px; right: 43%; display: none" name="error_title"
+												id="t21_error_title">
 												<div style="position: relative">
 													<div class="bln-bx">
-														<div id="t21_title_errmsg" data-role="content">Invalid
-															Input</div>
+														<div id="t21_title_errmsg" data-role="content">Invalid Input</div>
 														<a class="bln-arw" style="top: 85%" data-role="arrow"></a>
 													</div>
 												</div>
@@ -103,25 +102,21 @@
 												onfocus="this.style.color='#000';if(this.value=='Enter product/service name'){this.value='';}"
 												onclick="if(document.getElementById('t21_error_title').style.display=='block'){  document.getElementById('t21_error_title').style.display='none';document.getElementById('t21_q_title').className='t21_input';}"
 												onkeypress="this.style.color='#000';if(this.value=='Enter product/service name'){this.value='';}; if(document.getElementById('t21_error_title').style.display=='block'){ document.getElementById('t21_error_title').style.display='none';document.getElementById('t21_q_title').className ='t21_input';}"
-												placeholder="Enter product/service name"
-												value="Enter product/service name" maxlength="100"
-												autocomplete="off" spellcheck="true"
-												style="width: 99.2%; color: rgb(204, 204, 202);"
-												role="textbox" aria-autocomplete="list" aria-haspopup="true">
+												placeholder="Enter product/service name" value="Enter product/service name"
+												maxlength="100" autocomplete="off" spellcheck="true"
+												style="width: 99.2%; color: rgb(204, 204, 202);" role="textbox" aria-autocomplete="list"
+												aria-haspopup="true">
 										</div>
-										<textarea name="q_desc" id="t21_q_desc"
-											style="resize: none; color: #CCCCCA"
+										<textarea name="q_desc" id="t21_q_desc" style="resize: none; color: #CCCCCA"
 											onblur="if (this.value=='') {this.value='Provide specific details about : &quot;Product/Service required&quot;, &quot;Quality&quot;, &quot;Standard&quot;, &quot;Size&quot; etc...';this.style.color='#CCCCCA';};"
 											onfocus="this.style.color='#000';if(this.value=='Provide specific details about : &quot;Product/Service required&quot;, &quot;Quality&quot;, &quot;Standard&quot;, &quot;Size&quot; etc...'){this.value='';}"
 											onkeypress="this.style.color='#000';if(this.value=='Provide specific details about : &quot;Product/Service required&quot;, &quot;Quality&quot;, &quot;Standard&quot;, &quot;Size&quot; etc...'){this.value='';}"
 											placeholder="Provide specific details about : &quot;Product/Service required&quot;, &quot;Quality&quot;, &quot;Standard&quot;, &quot;Size&quot; etc..."></textarea>
 										<div></div>
-										<div id="t21_q_contact_dtl1" class="relt"
-											style="display: block;">
+										<div id="t21_q_contact_dtl1" class="relt" style="display: block;">
 											<dl
 												style="border: 1px solid #ccc; margin: 5px 0px 0px 2px; padding: 8px 0px 7px 0px; box-shadow: 0 -2px 0px rgba(0, 0, 0, 0.1) inset; box-sizing: border-box; -moz-box-sizing: border-box; border-radius: 0px; text-align: center; height: 40px; width: 15%; float: left; background-color: #fff"
-												id="t21_Country_dropdown" class="dropdown"
-												autocomplete="off">
+												id="t21_Country_dropdown" class="dropdown" autocomplete="off">
 												<dt>
 													<a><span style="background-position: 0px -1694px"></span>
 														<div class="as_arrow"></div> </a><span class="value"></span>
@@ -130,50 +125,40 @@
 													<ul class="country_list" style="display: none;">
 														<li class="country_list_item"
 															onclick="javascript:t21_bl_onSelect_countryISO(event,{&quot;value&quot;:&quot;91&quot;,&quot;label&quot;:&quot;India  +91&quot;,&quot;data&quot;:{&quot;cname&quot;:&quot;India&quot;,&quot;iso&quot;:&quot;IN&quot;,&quot;icon_order&quot;:&quot;154&quot;}})"><span
-															style="background-position: 0px -1694px"></span><a>India
-																+91</a></li>
+															style="background-position: 0px -1694px"></span><a>India +91</a></li>
 														<li class="country_list_item"
 															onclick="javascript:t21_bl_onSelect_countryISO(event,{&quot;value&quot;:&quot;1&quot;,&quot;label&quot;:&quot;United States Of America  +1&quot;,&quot;data&quot;:{&quot;cname&quot;:&quot;United States Of America&quot;,&quot;iso&quot;:&quot;US&quot;,&quot;icon_order&quot;:&quot;4&quot;}})"><span
-															style="background-position: 0px -44px"></span><a>United
-																States Of America +1</a></li>
+															style="background-position: 0px -44px"></span><a>United States Of America +1</a></li>
 														<li class="country_list_item"
 															onclick="javascript:t21_bl_onSelect_countryISO(event,{&quot;value&quot;:&quot;971&quot;,&quot;label&quot;:&quot;United Arab Emirates  +971&quot;,&quot;data&quot;:{&quot;cname&quot;:&quot;United Arab Emirates&quot;,&quot;iso&quot;:&quot;AE&quot;,&quot;icon_order&quot;:&quot;202&quot;}})"><span
-															style="background-position: 0px -2222px"></span><a>United
-																Arab Emirates +971</a></li>
+															style="background-position: 0px -2222px"></span><a>United Arab Emirates +971</a></li>
 														<li class="country_list_item"
 															onclick="javascript:t21_bl_onSelect_countryISO(event,{&quot;value&quot;:&quot;44&quot;,&quot;label&quot;:&quot;United Kingdom  +44&quot;,&quot;data&quot;:{&quot;cname&quot;:&quot;United Kingdom&quot;,&quot;iso&quot;:&quot;GB&quot;,&quot;icon_order&quot;:&quot;5&quot;}})"><span
-															style="background-position: 0px -55px"></span><a>United
-																Kingdom +44</a></li>
+															style="background-position: 0px -55px"></span><a>United Kingdom +44</a></li>
 														<li class="country_list_item"
 															onclick="javascript:t21_bl_onSelect_countryISO(event,{&quot;value&quot;:&quot;61&quot;,&quot;label&quot;:&quot;Australia  +61&quot;,&quot;data&quot;:{&quot;cname&quot;:&quot;Australia&quot;,&quot;iso&quot;:&quot;AU&quot;,&quot;icon_order&quot;:&quot;156&quot;}})"><span
-															style="background-position: 0px -1716px"></span><a>Australia
-																+61</a></li>
+															style="background-position: 0px -1716px"></span><a>Australia +61</a></li>
 														<li class="showmore"><a
 															onclick="Suggester({&quot;type&quot;:&quot;isd&quot;,&quot;element&quot;:&quot;t21_Country_dropdown&quot;,fields: &quot;cname,iso,icon_order&quot;,displayFields:&quot;cname,value&quot;,displaySeparator:&quot;  +&quot;,&quot;defaultValue&quot;:&quot;IN&quot;,&quot;showmore&quot; : &quot;false&quot;,&quot;onSelect&quot;:t21_bl_onSelect_countryISO});return;">Show
 																More</a></li>
 													</ul>
 												</dd>
 											</dl>
-											<div id="t21_indian_user"
-												style="overflow: visible; display: block;">
-												<div
-													style="position: absolute; top: 50px; right: 21%; display: none"
-													name="error_mob" id="t21_error_mob">
+											<div id="t21_indian_user" style="overflow: visible; display: block;">
+												<div style="position: absolute; top: 50px; right: 21%; display: none" name="error_mob"
+													id="t21_error_mob">
 													<div style="position: relative">
 														<div class="bln-bx" style="padding: 6px 11px;">
-															<div id="t21_mob_errmsg" data-role="content">Invalid
-																Mobile Number</div>
-															<a class="bln-arw"
-																style="top: -5px; left: 11px; transform: rotate(-135deg);"
+															<div id="t21_mob_errmsg" data-role="content">Invalid Mobile Number</div>
+															<a class="bln-arw" style="top: -5px; left: 11px; transform: rotate(-135deg);"
 																data-role="arrow"></a>
 														</div>
 													</div>
 												</div>
-												<input type="text" class="iso" readonly name="iso"
-													id="t21_iso"
+												<input type="text" class="iso" readonly name="iso" id="t21_iso"
 													style="width: 55px; float: left; border-right: 0px; border-radius: 0px; background: rgb(238, 238, 238); text-align: left; margin-top: 5px"
-													tabindex="-1"> <input type="text" name="q_mobile"
-													class="t21_input" id="t21_q_mobile"
+													tabindex="-1"> <input type="text" name="q_mobile" class="t21_input"
+													id="t21_q_mobile"
 													onkeypress="if(document.getElementById('t21_error_mob').style.display=='block'){		document.getElementById('t21_error_mob').style.display='none';document.getElementById('t21_q_mobile').className = 't21_input';}"
 													onfocus="this.style.color='#000';if(this.value=='Mobile'){this.value=''; };;return isNumberKey(event);"
 													style="width: 67% !important; float: left; margin-left: -1px; color: rgb(204, 204, 202); margin-top: 5px"
@@ -182,21 +167,17 @@
 													placeholder="Mobile" value="Mobile" maxlength="15">
 											</div>
 											<div id="t21_forgien_user" style="display: none">
-												<div
-													style="position: absolute; top: -26px; left: 82%; display: none"
-													name="error_email" id="t21_error_email">
+												<div style="position: absolute; top: -26px; left: 82%; display: none" name="error_email"
+													id="t21_error_email">
 													<div style="position: relative">
 														<div class="bln-bx">
-															<div id="t21_email_errmsg" data-role="content">Invalid
-																E-mail ID</div>
-															<a class="bln-arw"
-																style="top: 81%; left: 14px; transform: rotate(44deg)"
+															<div id="t21_email_errmsg" data-role="content">Invalid E-mail ID</div>
+															<a class="bln-arw" style="top: 81%; left: 14px; transform: rotate(44deg)"
 																data-role="arrow"></a>
 														</div>
 													</div>
 												</div>
-												<input type="text" name="q_email" id="t21_q_email"
-													class="t21_input" maxlength="100"
+												<input type="text" name="q_email" id="t21_q_email" class="t21_input" maxlength="100"
 													onblur="if (this.value=='') {this.value='Email';this.style.color='#CCCCCA'; };if(this.value!='Email'){callIfGlobalJSLoaded_isq(temp21Obj,'displayVal');}"
 													onclick="if(document.getElementById('t21_error_email').style.display=='block'){document.getElementById('t21_error_email').style.display='none';document.getElementById('t21_q_email').className = 't21_input';document.getElementById('t21_q_email').classList.remove('highlight-err');}"
 													onfocus="this.style.color='#000';if(this.value=='Email'){this.value=''; }"
@@ -205,62 +186,47 @@
 													style="width: 84%; float: left; margin-left: -1px; color: rgb(204, 204, 202); margin-top: 5px">
 											</div>
 											<div id="t21_contact_foreign" style="display: none">
-												<div
-													style="position: absolute; top: 64px; right: -1%; display: none"
+												<div style="position: absolute; top: 64px; right: -1%; display: none"
 													name="error_first_name" id="t21_error_first_name">
 													<div style="position: relative">
 														<div class="bln-bx">
-															<div id="t21_fname_errmsg" data-role="content">Kindly
-																enter Full Name</div>
-															<a class="bln-arw"
-																style="top: 37%; left: -4px; transform: rotate(128deg)"
+															<div id="t21_fname_errmsg" data-role="content">Kindly enter Full Name</div>
+															<a class="bln-arw" style="top: 37%; left: -4px; transform: rotate(128deg)"
 																data-role="arrow"></a>
 														</div>
 													</div>
 												</div>
-												<input type="text" class="t21_input" name="q_first_name"
-													id="t21_q_first_name" style="width: 99.2%"
-													placeholder="Name"
+												<input type="text" class="t21_input" name="q_first_name" id="t21_q_first_name"
+													style="width: 99.2%" placeholder="Name"
 													onclick="if(document.getElementById('t21_error_first_name').style.display=='block'){		document.getElementById('t21_error_first_name').style.display='none';document.getElementById('t21_q_first_name').className = 't21_input';}"
 													onkeypress="if(document.getElementById('t21_error_first_name').style.display=='block'){		document.getElementById('t21_error_first_name').style.display='none';document.getElementById('t21_q_first_name').className = 't21_input';}">
 											</div>
 										</div>
 										<div id="t21_q_buyer_details2" style="display: none;">
 											<div id="t21_q_buyer_details1" style="display: none;"></div>
-											<span name="bl_notme" id="t21_bl_notme"
-												style="display: none;">(Not me)</span>
+											<span name="bl_notme" id="t21_bl_notme" style="display: none;">(Not me)</span>
 										</div>
 										<div id="t21_sbtndiv">
-											<input type="submit" name="submit" value="Get Instant Quotes"
-												id="t21_sbtn">
+											<input type="submit" name="submit" value="Get Instant Quotes" id="t21_sbtn">
 										</div>
-										<input name="q_post" value="Send Your Buy Requirement"
-											type="hidden"> <input name="q_country_iso" value="IN"
-											type="hidden" id="t21_q_country_iso"> <input
-											name="q_country" value="IN" type="hidden"> <input
-											name="q_city" value="" type="hidden"> <input
-											name="q_state_others" value="" type="hidden"> <input
-											type="hidden" name="q_ph_country1" value="+91"> <input
-											type="hidden" name="q_country_name" value="India"> <input
-											name="q_state" value="" type="hidden"> <input
-											type="hidden" name="q_type" value="B"> <input
-											type="hidden" name="q_category" value="-1"> <input
-											type="hidden" name="q_mcat" value="-1"> <input
-											type="hidden" name="q_modid" value="IMHOME"> <input
-											type="hidden" name="q_page_referrer" value=""> <input
-											type="hidden" name="q_updatedusing"
-											value="Buyers Enquiry Form"> <input type="hidden"
-											name="afflid" value="-7"> <input name="q_utyp"
-											value="" type="hidden"> <input name="q_imurl"
-											value="" type="hidden"> <input type="hidden" value=""
-											name="q_qty"> <input type="hidden" value=""
-											name="q_qty_list_val1"> <input type="hidden" value=""
-											name="q_vd11"> <input type="hidden" value=""
-											name="q_comp_name"> <input type="hidden" value=""
-											name="q_website"> <input type="hidden" value="0"
-											name="bl_is_usr_flg"> <input type="hidden" value="1"
-											name="q_offrid" id="t21_q_offrid"> <input
-											type="hidden" value="" name="q_city_others"
+										<input name="q_post" value="Send Your Buy Requirement" type="hidden"> <input
+											name="q_country_iso" value="IN" type="hidden" id="t21_q_country_iso"> <input
+											name="q_country" value="IN" type="hidden"> <input name="q_city" value=""
+											type="hidden"> <input name="q_state_others" value="" type="hidden"> <input
+											type="hidden" name="q_ph_country1" value="+91"> <input type="hidden"
+											name="q_country_name" value="India"> <input name="q_state" value="" type="hidden">
+										<input type="hidden" name="q_type" value="B"> <input type="hidden"
+											name="q_category" value="-1"> <input type="hidden" name="q_mcat" value="-1">
+										<input type="hidden" name="q_modid" value="IMHOME"> <input type="hidden"
+											name="q_page_referrer" value=""> <input type="hidden" name="q_updatedusing"
+											value="Buyers Enquiry Form"> <input type="hidden" name="afflid" value="-7">
+										<input name="q_utyp" value="" type="hidden"> <input name="q_imurl" value=""
+											type="hidden"> <input type="hidden" value="" name="q_qty"> <input
+											type="hidden" value="" name="q_qty_list_val1"> <input type="hidden" value=""
+											name="q_vd11"> <input type="hidden" value="" name="q_comp_name"> <input
+											type="hidden" value="" name="q_website"> <input type="hidden" value="0"
+											name="bl_is_usr_flg"> <input type="hidden" value="1" name="q_offrid"
+											id="t21_q_offrid"> <input type="hidden" value="" name="q_city_others"
 											id="t21_q_city_others">
 									</form>
 									<div id="t21_q_send_req_loading"
@@ -270,8 +236,7 @@
 								</div>
 							</div>
 							<div id="t21_enrichform_maindiv" style="display: none"></div>
-							<span id="t21_q_lead_enrichment"></span> <span
-								id="t21_q_lead_conversion"></span> <span
+							<span id="t21_q_lead_enrichment"></span> <span id="t21_q_lead_conversion"></span> <span
 								id="t21_q_lead_impressionload"></span>
 						</div>
 					</div>
@@ -281,9 +246,8 @@
 						<!-- .tabs-content starts -->
 						<div class="content">
 							<div class="con-tab primary">
-								<a class="head-tab1 active">Electronics and Electrical</a> <a
-									class="head-tab2">Computer & IT Solutions</a> <a
-									class="head-tab3">Telecom Equipment & Goods</a>
+								<a class="head-tab1 active">Electronics and Electrical</a> <a class="head-tab2">Computer
+									& IT Solutions</a> <a class="head-tab3">Telecom Equipment & Goods</a>
 							</div>
 							<div class="row collapse row-eq-height primary-category">
 								<div class="cat-tab head-tab1 active">
@@ -332,23 +296,17 @@
 														</h5>
 													</a>
 												</div>
-												<a class="width33 left text-center padding8 cat-1 img-2"
-													href="#">
+												<a class="width33 left text-center padding8 cat-1 img-2" href="#">
 													<h6>Solar Street Lights</h6> <!--<img class="" src="images/img_solar.png" alt="" />-->
 												</a>
 											</div>
 											<div class="row">
 												<div class="maxwidth border-top row-eq-height">
-													<a
-														class="width33 text-center border-right columns cat-1 img-3"
-														href="#">
+													<a class="width33 text-center border-right columns cat-1 img-3" href="#">
 														<h6>Air Coolers</h6> <!--<img class="" src="images/img_machine.png" alt="" />-->
-													</a> <a
-														class="width33 text-center border-right columns cat-1 img-4"
-														href="#">
+													</a> <a class="width33 text-center border-right columns cat-1 img-4" href="#">
 														<h6>Security Cameras</h6> <!--<img class="" src="images/img_camera.png" alt="" />-->
-													</a> <a class="width33 text-center columns cat-1 img-5"
-														href="#">
+													</a> <a class="width33 text-center columns cat-1 img-5" href="#">
 														<h6>Split Air Conditioners</h6> <!--<img class="" src="images/img_ac.png" alt="" />-->
 													</a>
 												</div>
@@ -383,16 +341,11 @@
 											</div>
 											<div class="maxwidth border-top none columns">
 												<div class="row row-eq-height">
-													<a
-														class="width33 text-center border-right columns cat-1 img-3"
-														href="#">
+													<a class="width33 text-center border-right columns cat-1 img-3" href="#">
 														<h6>Networking Rack</h6>
-													</a> <a
-														class="width33 text-center border-right columns cat-1 img-4"
-														href="#">
+													</a> <a class="width33 text-center border-right columns cat-1 img-4" href="#">
 														<h6>Multi Recharge Modem</h6>
-													</a> <a class="width33 text-center columns cat-1 img-5"
-														href="#">
+													</a> <a class="width33 text-center columns cat-1 img-5" href="#">
 														<h6>Tally Accounting Software</h6>
 													</a>
 												</div>
@@ -427,16 +380,11 @@
 											</div>
 											<div class="maxwidth border-top none">
 												<div class="row row-eq-height">
-													<a
-														class="width33 text-center border-right columns cat-1 img-3"
-														href="#">
+													<a class="width33 text-center border-right columns cat-1 img-3" href="#">
 														<h6>Mobile Signal Booster</h6>
-													</a> <a
-														class="width33 text-center border-right columns cat-1 img-4"
-														href="#">
+													</a> <a class="width33 text-center border-right columns cat-1 img-4" href="#">
 														<h6>Video Conferencing System</h6>
-													</a> <a class="width33 text-center columns cat-1 img-5"
-														href="#">
+													</a> <a class="width33 text-center columns cat-1 img-5" href="#">
 														<h6>Power Bank</h6>
 													</a>
 												</div>
@@ -446,9 +394,8 @@
 								</div>
 							</div>
 							<div class="con-tab fourth">
-								<a class="head-tab1 active">Apparel & Garments</a> <a
-									class="head-tab2">Fashion & Accessories</a> <a
-									class="head-tab3">Sports Goods, Toys & Games</a>
+								<a class="head-tab1 active">Apparel & Garments</a> <a class="head-tab2">Fashion &
+									Accessories</a> <a class="head-tab3">Sports Goods, Toys & Games</a>
 							</div>
 							<div class="row row-eq-height fourth-category">
 								<div class="cat-tab head-tab1 active">
@@ -499,16 +446,11 @@
 											</div>
 											<div class="maxwidth border-top none">
 												<div class="row row-eq-height">
-													<a
-														class="width33 text-center border-right columns cat-3 img-3"
-														href="#">
+													<a class="width33 text-center border-right columns cat-3 img-3" href="#">
 														<h6>Ladies Salwar Suits</h6>
-													</a> <a
-														class="width33 text-center border-right columns cat-3 img-4"
-														href="#">
+													</a> <a class="width33 text-center border-right columns cat-3 img-4" href="#">
 														<h6>Tracksuits</h6>
-													</a> <a class="width33 text-center columns cat-3 img-5"
-														href="#">
+													</a> <a class="width33 text-center columns cat-3 img-5" href="#">
 														<h6>Ladies Tops</h6>
 													</a>
 												</div>
@@ -543,16 +485,11 @@
 											</div>
 											<div class="maxwidth border-top none">
 												<div class="row row-eq-height">
-													<a
-														class="width33 text-center border-right columns cat-3 img-3"
-														href="#">
+													<a class="width33 text-center border-right columns cat-3 img-3" href="#">
 														<h6>School Bags</h6>
-													</a> <a
-														class="width33 text-center border-right columns cat-3 img-4"
-														href="#">
+													</a> <a class="width33 text-center border-right columns cat-3 img-4" href="#">
 														<h6>Womens Footwear</h6>
-													</a> <a class="width33 text-center columns cat-3 img-5"
-														href="#">
+													</a> <a class="width33 text-center columns cat-3 img-5" href="#">
 														<h6>Ladies Hand Bags</h6>
 													</a>
 												</div>
@@ -587,16 +524,11 @@
 											</div>
 											<div class="maxwidth border-top none columns">
 												<div class="row row-eq-height">
-													<a
-														class="width33 text-center border-right columns cat-3 img-3"
-														href="#">
+													<a class="width33 text-center border-right columns cat-3 img-3" href="#">
 														<h6>Sports Shoes</h6>
-													</a> <a
-														class="width33 text-center border-right columns cat-3 img-4"
-														href="#">
+													</a> <a class="width33 text-center border-right columns cat-3 img-4" href="#">
 														<h6>Cricket Bat</h6>
-													</a> <a class="width33 text-center columns cat-3 img-5"
-														href="#">
+													</a> <a class="width33 text-center columns cat-3 img-5" href="#">
 														<h6>Soft Toys</h6>
 													</a>
 												</div>
@@ -606,9 +538,8 @@
 								</div>
 							</div>
 							<div class="con-tab secondry">
-								<a class="head-tab1 active">Medical & Healthcare</a> <a
-									class="head-tab2">Herbal & Ayurvedic Product</a> <a
-									class="head-tab3">Cosmetics & Personal Care</a>
+								<a class="head-tab1 active">Medical & Healthcare</a> <a class="head-tab2">Herbal &
+									Ayurvedic Product</a> <a class="head-tab3">Cosmetics & Personal Care</a>
 							</div>
 							<div class="row collapse secondry-category">
 								<div class="cat-tab head-tab1 active">
@@ -659,16 +590,11 @@
 											</div>
 											<div class="maxwidth border-top none columns">
 												<div class="row row-eq-height">
-													<a
-														class="width33 text-center border-right columns cat-2 img-3"
-														href="#">
+													<a class="width33 text-center border-right columns cat-2 img-3" href="#">
 														<h6>Body Massager</h6>
-													</a> <a
-														class="width33 text-center border-right columns cat-2 img-4"
-														href="#">
+													</a> <a class="width33 text-center border-right columns cat-2 img-4" href="#">
 														<h6>Surgical Gloves</h6>
-													</a> <a class="width33 text-center columns cat-2 img-5"
-														href="#">
+													</a> <a class="width33 text-center columns cat-2 img-5" href="#">
 														<h6>Hearing Aids</h6>
 													</a>
 												</div>
@@ -703,16 +629,11 @@
 											</div>
 											<div class="maxwidth border-top none">
 												<div class="row row-eq-height">
-													<a
-														class="width33 text-center border-right columns cat-2 img-3"
-														href="#">
+													<a class="width33 text-center border-right columns cat-2 img-3" href="#">
 														<h6>Aloe Vera Juice</h6>
-													</a> <a
-														class="width33 text-center border-right columns cat-2 img-4"
-														href="#">
+													</a> <a class="width33 text-center border-right columns cat-2 img-4" href="#">
 														<h6>Ayurvedic Medicine</h6>
-													</a> <a class="width33 text-center columns cat-2 img-5"
-														href="#">
+													</a> <a class="width33 text-center columns cat-2 img-5" href="#">
 														<h6>Moringa Seeds</h6>
 													</a>
 												</div>
@@ -747,16 +668,11 @@
 											</div>
 											<div class="maxwidth border-top none columns">
 												<div class="row row-eq-height">
-													<a
-														class="width33 text-center border-right columns cat-2 img-3"
-														href="#">
+													<a class="width33 text-center border-right columns cat-2 img-3" href="#">
 														<h6>Perfumes</h6>
-													</a> <a
-														class="width33 text-center border-right columns cat-2 img-4"
-														href="#">
+													</a> <a class="width33 text-center border-right columns cat-2 img-4" href="#">
 														<h6>Detergent Powder</h6>
-													</a> <a class="width33 text-center columns cat-2 img-5"
-														href="#">
+													</a> <a class="width33 text-center columns cat-2 img-5" href="#">
 														<h6>Hand Sanitizer</h6>
 													</a>
 												</div>
@@ -767,9 +683,8 @@
 							</div>
 							<!-- Second Ends -->
 							<div class="con-tab ternary">
-								<a class="head-tab1 active">Industrial Plant & Machine</a> <a
-									class="head-tab2">Industrial Supplies</a> <a class="head-tab3">
-									Mechanical Parts & Spares</a>
+								<a class="head-tab1 active">Industrial Plant & Machine</a> <a class="head-tab2">Industrial
+									Supplies</a> <a class="head-tab3"> Mechanical Parts & Spares</a>
 							</div>
 							<div class="row row-eq-height ternary-category">
 								<div class="cat-tab head-tab1 active">
@@ -820,16 +735,11 @@
 											</div>
 											<div class="maxwidth border-top none">
 												<div class="row row-eq-height">
-													<a
-														class="width33 text-center border-right columns cat-3 img-3"
-														href="#">
+													<a class="width33 text-center border-right columns cat-3 img-3" href="#">
 														<h6>Hydraulic Jacks</h6>
-													</a> <a
-														class="width33 text-center border-right columns cat-3 img-4"
-														href="#">
+													</a> <a class="width33 text-center border-right columns cat-3 img-4" href="#">
 														<h6>Dal Mill Machines</h6>
-													</a> <a class="width33 text-center columns cat-3 img-5"
-														href="#">
+													</a> <a class="width33 text-center columns cat-3 img-5" href="#">
 														<h6>Hydraulic Presses</h6>
 													</a>
 												</div>
@@ -864,16 +774,11 @@
 											</div>
 											<div class="maxwidth border-top none">
 												<div class="row row-eq-height">
-													<a
-														class="width33 text-center border-right columns cat-3 img-3"
-														href="#">
+													<a class="width33 text-center border-right columns cat-3 img-3" href="#">
 														<h6>Water Tanks</h6>
-													</a> <a
-														class="width33 text-center border-right columns cat-3 img-4"
-														href="#">
+													</a> <a class="width33 text-center border-right columns cat-3 img-4" href="#">
 														<h6>Toughened Glass</h6>
-													</a> <a class="width33 text-center columns cat-3 img-5"
-														href="#">
+													</a> <a class="width33 text-center columns cat-3 img-5" href="#">
 														<h6>MS Pipe</h6>
 													</a>
 												</div>
@@ -908,16 +813,11 @@
 											</div>
 											<div class="maxwidth border-top none columns">
 												<div class="row row-eq-height">
-													<a
-														class="width33 text-center border-right columns cat-3 img-3"
-														href="#">
+													<a class="width33 text-center border-right columns cat-3 img-3" href="#">
 														<h6>MS Bolt Nut</h6>
-													</a> <a
-														class="width33 text-center border-right columns cat-3 img-4"
-														href="#">
+													</a> <a class="width33 text-center border-right columns cat-3 img-4" href="#">
 														<h6>Diesel Engine Pump Sets</h6>
-													</a> <a class="width33 text-center columns cat-3 img-5"
-														href="#">
+													</a> <a class="width33 text-center columns cat-3 img-5" href="#">
 														<h6>Vacuum Pumps</h6>
 													</a>
 												</div>
@@ -950,40 +850,35 @@
 							</div>
 					</a></li>
 					<li class="brand-2">
-						<!--<img src="images/logo-2.png" alt="" />--> <a href="#">mahindra
-							and mahindra
+						<!--<img src="images/logo-2.png" alt="" />--> <a href="#">mahindra and mahindra
 							<div class="overlay">
 								<span class="btn">View Products</span>
 							</div>
 					</a>
 					</li>
 					<li class="brand-3">
-						<!--<img src="images/logo-3.png" alt="" />--> <a href="#">Finolex
-							pipes fittings
+						<!--<img src="images/logo-3.png" alt="" />--> <a href="#">Finolex pipes fittings
 							<div class="overlay">
 								<span class="btn">View Products</span>
 							</div>
 					</a>
 					</li>
 					<li class="brand-4">
-						<!--<img src="images/logo-4.png" alt="" />--> <a href="#">eicher
-							motors limited
+						<!--<img src="images/logo-4.png" alt="" />--> <a href="#">eicher motors limited
 							<div class="overlay">
 								<span class="btn">View Products</span>
 							</div>
 					</a>
 					</li>
 					<li class="brand-5">
-						<!--<img src="images/logo-5.png" alt="" />--> <a href="#">fenesta
-							building system
+						<!--<img src="images/logo-5.png" alt="" />--> <a href="#">fenesta building system
 							<div class="overlay">
 								<span class="btn">View Products</span>
 							</div>
 					</a>
 					</li>
 					<li class="brand-6">
-						<!--<img src="images/logo-5.png" alt="" />--> <a href="#">jcb
-							india ltd
+						<!--<img src="images/logo-5.png" alt="" />--> <a href="#">jcb india ltd
 							<div class="overlay">
 								<span class="btn">View Products</span>
 							</div>
@@ -1011,8 +906,7 @@
 					</a>
 					</li>
 					<li class="brand-10 last">
-						<!--<img src="images/logo-5.png" alt="" />--> <a href="#">mahindra
-							Earth Master
+						<!--<img src="images/logo-5.png" alt="" />--> <a href="#">mahindra Earth Master
 							<div class="overlay">
 								<span class="btn">View Products</span>
 							</div>
@@ -1035,41 +929,34 @@
 				<ul class="bxslider-normal text-center">
 					<li>
 						<p>
-							Excellent prompt response and professional service.<br /> Good
-							going. keep it up.
+							Excellent prompt response and professional service.<br /> Good going. keep it up.
 						</p>
 						<h4>Biseshwar Mishra,</h4>
-						<h5>Tata Motors, India</h5> <a class="btn" href="#">Read
-							more...</a>
+						<h5>Tata Motors, India</h5> <a class="btn" href="#">Read more...</a>
 					</li>
 					<li>
 						<p>
-							I really appreciate you guys for your swift response.<br />
-							Thanks so much, you guys made my search so much easy.
+							I really appreciate you guys for your swift response.<br /> Thanks so much, you guys made my
+							search so much easy.
 						</p>
 						<h4>Nirmesh Kumar,</h4>
-						<h5>Powergrid of India Ltd, India</h5> <a class="btn" href="#">Read
-							more...</a>
+						<h5>Powergrid of India Ltd, India</h5> <a class="btn" href="#">Read more...</a>
 					</li>
 					<li>
 						<p>
-							I am really very happy with the service and the<br />
-							extraordinary support given to me from all your.<br />
-							representatives.
+							I am really very happy with the service and the<br /> extraordinary support given to me from
+							all your.<br /> representatives.
 						</p>
 						<h4>Mr. Kalpesh Purohit</h4>
-						<h5>Jai Ma Shakti Health & Wellness Products</h5> <a class="btn"
-						href="#">Read more...</a>
+						<h5>Jai Ma Shakti Health & Wellness Products</h5> <a class="btn" href="#">Read more...</a>
 					</li>
 					<li>
 						<p>
-							Portals like Ceo Stock which we are using are<br /> being used
-							by many more people like us.<br /> This has helped us reach out
-							to many new segments and customers.
+							Portals like Ceo Stock which we are using are<br /> being used by many more people like us.<br />
+							This has helped us reach out to many new segments and customers.
 						</p>
 						<h4>Mr. Vijendra Rawat,</h4>
-						<h5>Studio Kreative Gifts & Merchandise</h5> <a class="btn"
-						href="#">Read more...</a>
+						<h5>Studio Kreative Gifts & Merchandise</h5> <a class="btn" href="#">Read more...</a>
 					</li>
 				</ul>
 			</div>
@@ -1077,13 +964,11 @@
 				<ul class="bxslider-normal text-center bblogo">
 					<li>
 						<div class="width30 left bblogo-1">
-							<a href="#"> <!--<img src="images/logo_voltas.png" alt="" />-->bharat
-								electronics
+							<a href="#"> <!--<img src="images/logo_voltas.png" alt="" />-->bharat electronics
 							</a>
 						</div>
 						<div class="width30 left bblogo-2">
-							<a href="#"> <!--<img src="images/logo_aditya.png" alt="" />-->tata
-								motors
+							<a href="#"> <!--<img src="images/logo_aditya.png" alt="" />-->tata motors
 							</a>
 						</div>
 						<div class="width30 left bblogo-3">
@@ -1099,8 +984,7 @@
 							</a>
 						</div>
 						<div class="width30 left bblogo-6">
-							<a href="#"> <!--<img src="images/logo_ntpc.png" alt="" />-->mahindra
-								and mahindra
+							<a href="#"> <!--<img src="images/logo_ntpc.png" alt="" />-->mahindra and mahindra
 							</a>
 						</div>
 						<div class="large-12 text-center columns">

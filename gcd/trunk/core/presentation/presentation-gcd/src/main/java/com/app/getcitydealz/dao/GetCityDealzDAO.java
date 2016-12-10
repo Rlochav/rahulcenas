@@ -15,9 +15,6 @@ import java.util.Map;
 
 import javax.persistence.Query;
 
-import org.springframework.util.CollectionUtils;
-import org.springframework.util.StringUtils;
-
 import com.app.commonexception.BaseException;
 import com.app.getcitydealz.dto.SubCategoryDTO;
 import com.app.login.dto.UserInfo;

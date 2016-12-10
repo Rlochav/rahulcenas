@@ -1,4 +1,4 @@
-<%-- <%@page import="com.app.getcitydealz.dto.HotDealBannerDTO"%>
+ <%@page import="com.app.getcitydealz.dto.HotDealBannerDTO"%>
 <%@page import="com.app.getcitydealz.merchant.service.MerchantService"%>
 <%@page import="com.app.common.dto.GcdMetaDTO"%>
 <%@page import="org.springframework.util.CollectionUtils"%>
@@ -16,7 +16,7 @@
 	MerchantService merchantService = (MerchantService) ctx.getBean("merchantService");
 	HotDealBannerDTO bannerDTO = merchantService.getHotDealDetails(null);
 %>
-<script src="<c:url value='resources/js/jssor.js'/>"></script>
+<%--<script src="<c:url value='resources/js/jssor.js'/>"></script>
 <script src="<c:url value='resources/js/jssor.slider.js'/>"></script>
 <script src="<c:url value='resources/js/gcdSlider.js'/>"></script>
 <link href="<c:url value='resources/css/gcdSliderCss.css'/>" rel="stylesheet" type="text/css" />
