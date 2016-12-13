@@ -31,20 +31,16 @@
 		</div>
 	</div>
 </div> --%>
+<%@include file="../admin/adminsociallinks.jsp" %>
 <footer id="new-footer">
 	<div class="cf_clb cf_footer" style="display: block;">
 		<div class="cf_ftHd">
 			<div class="cf_wd">
 				<div class="cf_social">
-					<c:if test="${listVar.socialConnectionsDTO.facebookFanPage!=null && listVar.socialConnectionsDTO.facebookFanPagechk==1}">
-					Follow us on: <a href="${listVar.socialConnectionsDTO.facebookFanPage}" target="_blank" class="cf_fb">Facebook</a>
-					</c:if>
-					<c:if test="${listVar.socialConnectionsDTO.twitterAccount!=null && listVar.socialConnectionsDTO.twitterAccountchk==1}"> 
-					 <a href="${listVar.socialConnectionsDTO.twitterAccount}" class="tw_ft">Twitter</a> 
-					 </c:if>
-					 <a href="#" class="cf_gpls" target="_blank">LinkedIn</a>
-						
-				</div>
+							Follow us on: <a href="#" class="cf_fb" target="_blank">Facebook</a>
+							<a href="javascript:void(0);" onclick="getOAuthUrl();" class="tw_ft">Twitter</a> <a href="#"
+								class="cf_gpls" target="_blank">LinkedIn</a>
+						</div>
 				<div class="cf_goMob cf_rht">
 					Go Mobile: <a href="#" class="cf_iOS" target="_blank">iOS App</a> <a href="#" class="cf_anrd"
 						target="_blank">Android App</a> <a href="#" class="cf_wndw" target="_blank">Windows App</a> <a
