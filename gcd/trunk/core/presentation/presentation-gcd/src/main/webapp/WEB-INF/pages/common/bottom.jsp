@@ -31,16 +31,19 @@
 		</div>
 	</div>
 </div> --%>
-<div id="fb-root"></div>
-<link type="text/css" rel="stylesheet" href="<c:url value='/resources/css/imart/custom.css'/>" />
-<script src="<c:url value='/resources/js/imart/custom.js'/>"></script>
 <footer id="new-footer">
 	<div class="cf_clb cf_footer" style="display: block;">
 		<div class="cf_ftHd">
 			<div class="cf_wd">
 				<div class="cf_social">
-					Follow us on: <a href="javascript:void(0);" onclick="login()" class="cf_fb">Facebook</a> <a href="javascript:void(0);" onclick="fbs_click()" class="tw_ft"
-						>Twitter</a> <a href="#" class="cf_gpls" target="_blank">LinkedIn</a>
+					<c:if test="${listVar.socialConnectionsDTO.facebookFanPage!=null && listVar.socialConnectionsDTO.facebookFanPagechk==1}">
+					Follow us on: <a href="${listVar.socialConnectionsDTO.facebookFanPage}" target="_blank" class="cf_fb">Facebook</a>
+					</c:if>
+					<c:if test="${listVar.socialConnectionsDTO.twitterAccount!=null && listVar.socialConnectionsDTO.twitterAccountchk==1}"> 
+					 <a href="${listVar.socialConnectionsDTO.twitterAccount}" class="tw_ft">Twitter</a> 
+					 </c:if>
+					 <a href="#" class="cf_gpls" target="_blank">LinkedIn</a>
+						
 				</div>
 				<div class="cf_goMob cf_rht">
 					Go Mobile: <a href="#" class="cf_iOS" target="_blank">iOS App</a> <a href="#" class="cf_anrd"

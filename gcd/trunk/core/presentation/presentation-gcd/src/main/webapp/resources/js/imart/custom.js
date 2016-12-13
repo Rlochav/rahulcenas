@@ -1,4 +1,4 @@
-window.fbAsyncInit = function() {
+/*window.fbAsyncInit = function() {
     FB.init({
     	appId : '274313712698100',
 		status : true,
@@ -33,7 +33,7 @@ window.fbAsyncInit = function() {
 	}
 	setTimeout(function() {
 	    login();
-	},2000);
+	},2000);*/
 	
 	        function fbs_click() {
 		    var twtTitle = document.title;

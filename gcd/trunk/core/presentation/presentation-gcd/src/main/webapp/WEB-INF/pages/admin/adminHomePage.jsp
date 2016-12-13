@@ -8,6 +8,20 @@
 <link type="text/css" rel="stylesheet" href="<c:url value='/resources/css/imart/style.css'/>" />
 <script src="<c:url value='/resources/js/imart/jquery.min.js'/>"></script>
 <script src="<c:url value='/resources/js/imart/home.js'/>" type="text/javascript"></script>
+
+<script src="http://connect.facebook.net/en_US/all.js"></script>
+<script>
+	window.fbAsyncInit = FB.init({
+		appId : '1499701620271988',
+		status : true,
+		cookie : true,
+		xfbml : true
+	});
+</script>
+<!-- Place this tag in your head or just before your close body tag. -->
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<script src='http://assets.pinterest.com/js/pinit.js' type='text/javascript'></script>
+<script src="https://apis.google.com/js/client.js?onload=handleClientLoad" gapi_processed="true"></script>
 </head>
 <body>
 	<%@include file="../common/header.jsp"%>
