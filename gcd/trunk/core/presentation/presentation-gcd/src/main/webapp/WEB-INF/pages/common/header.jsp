@@ -157,7 +157,8 @@
 	</div>
 	<br>
 </div> --%>
-
+<link type="text/css" rel="stylesheet" href="<c:url value='/resources/css/imart/custom.css'/>" />
+<script src="<c:url value='/resources/js/imart/custom.js'/>"></script>
 <div id="header">
 		<div class="row">
 			<div class="topbar">
@@ -165,7 +166,7 @@
 					<li><a href="#" target="_blank" class="industry-cluster"><span
 							class="in-map"></span>Industry Clusters</a></li>
 					<li><a class="hwrk" href="#">How We Work</a></li>
-					<li><a target="_blank" href="#"><span class="tv-icon"></span>Watch
+					<li><a class="various fancybox" href="https://www.youtube.com/embed/jid2A7ldc_8?autoplay=1"><span class="tv-icon"></span>Watch
 							Our Latest Film</a></li>
 				</ul>
 				<ul class="right">

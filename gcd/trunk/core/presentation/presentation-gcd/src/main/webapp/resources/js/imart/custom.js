@@ -1,31 +1,41 @@
-	window.fbAsyncInit = FB.init({
-		appId : '1499701620271988',
+window.fbAsyncInit = function() {
+    FB.init({
+    	appId : '274313712698100',
 		status : true,
 		cookie : true,
 		xfbml : true
-	});
-		(function(d, s, id) {
-			var js, fjs = d.getElementsByTagName(s)[0];
-			if (d.getElementById(id))
-				return;
-			js = d.createElement(s);
-			js.id = id;
-			js.src = "//connect.facebook.net/en_US/en_US/sdk.js#xfbml=1&version=v2.0";
-			fjs.parentNode.insertBefore(js, fjs);
-		}(document, 'script', 'facebook-jssdk'));
+    });
+    FB.AppEvents.logPageView();
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/pl_PL/all.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));	
 		
-		function loginFacebook() {
-	        FB.login(function(response) {
-	            if (response.authResponse) {
-	                // connected
+  function testAPI() {
+	     console.log('Welcome!  Fetching your information.... ');
+	     FB.api('/me', function(response) {
+	         console.log('Good to see you, ' + response.name + '.');
+	     });
+	}
+	function login() {
+	    FB.login(function(response) {
+	        if (response.authResponse) {
 	            testAPI();
-	            } else {
-	                // cancelled
-	            }
-	        }, { scope: 'email' });
+	        } else {
+	            // cancelled
 	        }
+	    });
+	}
+	setTimeout(function() {
+	    login();
+	},2000);
 	
-		    function fbs_click() {
+	        function fbs_click() {
 		    var twtTitle = document.title;
 		    var twtUrl = location.href;
 		    var maxLength = 140 - (twtUrl.length + 1);

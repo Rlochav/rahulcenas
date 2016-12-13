@@ -4272,7 +4272,7 @@ transform:perspective(120px) rotateX(-180deg) rotateY(-179.9deg)
 	width: 140px
 }
 .cf_ftlk li.cf_wdth {
-	width: 240px
+	width: 237px
 }
 .cf_ftlk li a {
 	display: block;
@@ -4344,4 +4344,15 @@ transform:perspective(120px) rotateX(-180deg) rotateY(-179.9deg)
 }
 .dropdown dt a span {
     margin: 4px 3px;
+}
+.cf_ftlk li:last-child{
+	margin-right: 0 !important;
+	width: 140px;
+}
+.cf_ftlk li:nth-last-child(2){
+	width: 240px;
+}
+
+.cf_ftlk li:nth-last-child(3){
+	width: 240px;
 }
