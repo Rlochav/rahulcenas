@@ -8,20 +8,12 @@
 <link type="text/css" rel="stylesheet" href="<c:url value='/resources/css/imart/style.css'/>" />
 <script src="<c:url value='/resources/js/imart/jquery.min.js'/>"></script>
 <script src="<c:url value='/resources/js/imart/home.js'/>" type="text/javascript"></script>
-
-<script src="http://connect.facebook.net/en_US/all.js"></script>
-<script>
-	window.fbAsyncInit = FB.init({
-		appId : '1499701620271988',
-		status : true,
-		cookie : true,
-		xfbml : true
-	});
 </script>
 <!-- Place this tag in your head or just before your close body tag. -->
 <script src="https://apis.google.com/js/platform.js" async defer></script>
-<script src='http://assets.pinterest.com/js/pinit.js' type='text/javascript'></script>
+<script src='http://assets.pinterest.com/js/pinit.js' type='text/javascript' />
 <script src="https://apis.google.com/js/client.js?onload=handleClientLoad" gapi_processed="true"></script>
+
 </head>
 <body>
 	<%@include file="../common/header.jsp"%>
@@ -939,7 +931,9 @@
 			</div>
 		</div>
 		<div class="row row-eq-height big-buyer-section">
+		
 			<div class="large-5 slider">
+			
 				<ul class="bxslider-normal text-center">
 					<li>
 						<p>
@@ -948,32 +942,10 @@
 						<h4>Biseshwar Mishra,</h4>
 						<h5>Tata Motors, India</h5> <a class="btn" href="#">Read more...</a>
 					</li>
-					<li>
-						<p>
-							I really appreciate you guys for your swift response.<br /> Thanks so much, you guys made my
-							search so much easy.
-						</p>
-						<h4>Nirmesh Kumar,</h4>
-						<h5>Powergrid of India Ltd, India</h5> <a class="btn" href="#">Read more...</a>
-					</li>
-					<li>
-						<p>
-							I am really very happy with the service and the<br /> extraordinary support given to me from
-							all your.<br /> representatives.
-						</p>
-						<h4>Mr. Kalpesh Purohit</h4>
-						<h5>Jai Ma Shakti Health & Wellness Products</h5> <a class="btn" href="#">Read more...</a>
-					</li>
-					<li>
-						<p>
-							Portals like Ceo Stock which we are using are<br /> being used by many more people like us.<br />
-							This has helped us reach out to many new segments and customers.
-						</p>
-						<h4>Mr. Vijendra Rawat,</h4>
-						<h5>Studio Kreative Gifts & Merchandise</h5> <a class="btn" href="#">Read more...</a>
-					</li>
+					
 				</ul>
 			</div>
+			
 			<div class="large-7 bg-white big-buyer-slider">
 				<ul class="bxslider-normal text-center bblogo">
 					<li>
