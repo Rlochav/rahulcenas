@@ -62,7 +62,7 @@
 			<c:set var="categoryName2" value="${fn:join(categoryName1, '-')}"/>
 			<c:set var="categoryName3" value="${fn:split(categoryName2, '/')}"/>
 			<c:set var="categoryName4" value="${fn:join(categoryName3, '-')}"/>
-			<li id="menu-item-${count}"><a href="http://localhost:8081/presentation-gcd/admin/${categoryName4}-${categoryDTO.categoryId}">${categoryDTO.categoryName}(${categoryDTO.counts})</a></li>
+			<li id="menu-item-${count}"><a href="http://localhost:8081/presentation-gcd/admin/${categoryName4}-${categoryDTO.categoryId}">${categoryDTO.categoryName}</a></li>
         <c:set var="count" value="${count + 1}" scope="page"/>
         </c:forEach>     
 		<li id="menu-item-13" class="view-all"><a class="dc-mega"

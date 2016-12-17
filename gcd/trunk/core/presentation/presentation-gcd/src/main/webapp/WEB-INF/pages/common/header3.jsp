@@ -135,7 +135,7 @@
 						<img src="<c:url value='/resources/images/ATTRACTIONS.png'/>" border="0" alt="ATTRACTIONS" title="ATTRACTIONS">
 					</a> <a id="tnb_services" href="../dealsbymaincategory/services"> <img src="<c:url value='/resources/images/SERVICES.png'/>" border="0" alt="SERVICES" title="SERVICES"></a> <a id="tnb_recreation" href="../dealsbymaincategory/recreation"> <img
 						src="<c:url value='/resources/images/RECREATION.png'/>" border="0" alt="RECREATION" title="RECREATION"></a> --%>
-					<%
+					<%-- <%
 						if (dto2 != null && !CollectionUtils.isEmpty(dto2.getGcdMetaDTOs())) {
 							for (GcdMetaDTO g : dto2.getGcdMetaDTOs()) {
 								String img = null;
@@ -149,7 +149,7 @@
 						}
 							}
 						}
-					%>
+					%> --%>
 				</div>
 			</div>
 		</div>
