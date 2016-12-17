@@ -45,7 +45,7 @@
 <script>
 gapi.analytics.ready(function() {
 
-  // Step 3: Authorize the user.
+  // Step 3: Authorize the users.
 
   var CLIENT_ID = '409160420325-ub8u1td20i4it7fi1mi2hcfvi77ao32p.apps.googleusercontent.com';
 
