@@ -98,13 +98,13 @@ gapi.analytics.ready(function() {
 	<div class="cf_clb cf_footer" style="display: block;">
 		<div class="cf_ftHd">
 			<div class="cf_wd">
-			
+			<c:if test="${socialProfileDTO.emailId==null}">
 				<div class="cf_social">
 							Follow us on: <a class="cf_fb" href="javascript:void(0);" onclick="login();">Facebook</a>
 							<a href="javascript:void(0);" onclick="fbs_click();" class="tw_ft">Twitter</a> 
 							<a id="googlelogin" href="javascript:void(0);" class="cf_gpls">Google Plus</a>
 						</div>
-	
+	        </c:if>
 				<div class="cf_goMob cf_rht">
 					Go Mobile: <a href="#" class="cf_iOS" target="_blank">iOS App</a> <a href="#" class="cf_anrd"
 						target="_blank">Android App</a> <a href="#" class="cf_wndw" target="_blank">Windows App</a> <a

@@ -858,6 +858,7 @@
 			</div>
 		</div>
 	</section>
+	
 
 	<!--buyer dashboard section ends-->
 
@@ -952,15 +953,33 @@
 			<div class="large-5 slider">
 
 				<ul class="bxslider-normal text-center">
-					<li>
-						<p>
-							Excellent prompt response and professional service.<br /> Good going. keep it up.
-						</p>
-						<h4>Biseshwar Mishra,</h4>
-						<h5>Tata Motors, India</h5> <a class="btn" href="#">Read more...</a>
-					</li>
-
-				</ul>
+        <li>
+          <p>Excellent prompt response and professional service.<br/>
+            Good going. keep it up.</p>
+          <h4>Biseshwar Mishra,</h4>
+          <h5>Tata Motors, India</h5>
+          <a class="btn" href="#">Read more...</a> </li>
+        <li>
+          <p>I really appreciate you guys for your swift response.<br/>
+            Thanks so much, you guys made my search so much easy.</p>
+          <h4>Nirmesh Kumar,</h4>
+          <h5>Powergrid of India Ltd, India</h5>
+          <a class="btn" href="#">Read more...</a> </li>
+        <li>
+          <p>I am really very happy with the service and the<br/>
+            extraordinary support given to me from all your.<br/>
+            representatives.</p>
+          <h4>Mr. Kalpesh Purohit</h4>
+          <h5>Jai Ma Shakti Health & Wellness Products</h5>
+          <a class="btn" href="#">Read more...</a> </li>
+        <li>
+          <p>Portals like Ceo Stock which we are using are<br/>
+            being used by many more people like us.<br/>
+            This has helped us reach out to many new segments and customers.</p>
+          <h4>Mr. Vijendra Rawat,</h4>
+          <h5>Studio Kreative Gifts & Merchandise</h5>
+          <a class="btn" href="#">Read more...</a> </li>
+      </ul>
 			</div>
 
 			<div class="large-7 bg-white big-buyer-slider">

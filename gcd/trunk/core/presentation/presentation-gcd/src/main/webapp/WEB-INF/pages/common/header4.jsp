@@ -128,11 +128,11 @@
 	<div class="icon-menu">
 		<div class="moduletable">
 			<div class="custom">
-				<div id="top_nav_buttons">
-					<%-- <a id="tnb_dining" href="dealsbymaincategory/dining"><img src="<c:url value='/resources/images/DINING.png'/>" border="0" alt="DINING" title="DINING"></a> <a id="tnb_nightlife" href="dealsbymaincategory/night-life"><img src="<c:url value='/resources/images/NIGHTLIFE.png'/>" border="0"
+				<%-- <div id="top_nav_buttons">
+					<a id="tnb_dining" href="dealsbymaincategory/dining"><img src="<c:url value='/resources/images/DINING.png'/>" border="0" alt="DINING" title="DINING"></a> <a id="tnb_nightlife" href="dealsbymaincategory/night-life"><img src="<c:url value='/resources/images/NIGHTLIFE.png'/>" border="0"
 						alt="NIGHTLIFE" title="NIGHTLIFE"> </a> <a id="tnb_shopping" href="dealsbymaincategory/shopping"> <img src="<c:url value='/resources/images/SHOPPING.png'/>" border="0" alt="SHOPPING" title="SHOPPING"></a> <a id="tnb_attractions" href="dealsbymaincategory/attractions"> <img
 						src="<c:url value='/resources/images/ATTRACTIONS.png'/>" border="0" alt="ATTRACTIONS" title="ATTRACTIONS"></a> <a id="tnb_services" href="dealsbymaincategory/services"> <img src="<c:url value='/resources/images/SERVICES.png'/>" border="0" alt="SERVICES" title="SERVICES"></a> <a
-						id="tnb_recreation" href="dealsbymaincategory/recreation"> <img src="<c:url value='/resources/images/RECREATION.png'/>" border="0" alt="RECREATION" title="RECREATION"></a> --%>
+						id="tnb_recreation" href="dealsbymaincategory/recreation"> <img src="<c:url value='/resources/images/RECREATION.png'/>" border="0" alt="RECREATION" title="RECREATION"></a>
 					<%
 						if (dto2 != null && !CollectionUtils.isEmpty(dto2.getGcdMetaDTOs())) {
 							for (GcdMetaDTO g : dto2.getGcdMetaDTOs()) {
@@ -148,7 +148,7 @@
 							}
 						}
 					%>
-				</div>
+				</div> --%>
 			</div>
 		</div>
 	</div>

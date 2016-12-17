@@ -1,3 +1,4 @@
+<%@include file="../common/taglibs.jsp"%>
 <div class="left">
 	<div class="moduletable">
 		<div id="deals_by_map">

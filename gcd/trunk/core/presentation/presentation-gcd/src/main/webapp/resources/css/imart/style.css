@@ -1319,7 +1319,7 @@ text-shadow:none
 #menu-bar .dcjq-vertical-mega-menu .menu li .sub-container {
 	left: 0!important;
 	margin-top: 0!important;
-	z-index: 9999999
+	z-index: 9999999!important;
 }
 .dcjq-vertical-mega-menu .menu li .sub-container .sub {
 	position: relative
@@ -1608,8 +1608,11 @@ h2 {
 	position: absolute;
 	padding: 0;
 	top: 0;
-	left: 218px!important;
-	display: none !important;
+
+	
+}
+#menu-bar .dcjq-vertical-mega-menu .menu .sub li.mega-hdr li:hover,#menu-bar .menu ul li.mega-unit.mega-hdr:hover {
+ background:transparent;
 }
 .dcjq-vertical-mega-menu .menu li .sub-container .sub {
 	border: none;
