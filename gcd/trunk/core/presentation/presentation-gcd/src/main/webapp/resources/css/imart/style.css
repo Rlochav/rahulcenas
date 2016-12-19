@@ -628,7 +628,7 @@ text-shadow:none
 	min-width: 100%;
 	position: absolute;
 	left: 0;
-	z-index: 1
+	z-index: 0
 }
 #menu-bar .tabs-content .width33 {
 	float: left
@@ -1319,7 +1319,7 @@ text-shadow:none
 #menu-bar .dcjq-vertical-mega-menu .menu li .sub-container {
 	left: 0!important;
 	margin-top: 0!important;
-	z-index: 9999999!important;
+	z-index: 10000;
 }
 .dcjq-vertical-mega-menu .menu li .sub-container .sub {
 	position: relative
@@ -1395,7 +1395,7 @@ text-shadow:none
 #menu-bar .dcjq-vertical-mega-menu .menu li .sub-container {
 	width: 480px!important;
 	margin-top: 0!important;
-	z-index: 9999999;
+	z-index: 10000;
 	left: 100%!important
 }
 .dcjq-vertical-mega-menu .menu li .sub .row {
