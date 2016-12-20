@@ -57,14 +57,28 @@
 		<li id="menu-item-0"><a class="dc-mega">Categories </a></li>
 		<c:set var="count" value="1" scope="page" />
 		<c:forEach var="categoryDTO" items="${categoryDTO}">
-			<c:set var="categoryName" value="${categoryDTO.categoryName}"/>
-			<c:set var="categoryName1" value="${fn:split(categoryName, ' ')}"/>
-			<c:set var="categoryName2" value="${fn:join(categoryName1, '-')}"/>
-			<c:set var="categoryName3" value="${fn:split(categoryName2, '/')}"/>
-			<c:set var="categoryName4" value="${fn:join(categoryName3, '-')}"/>
-			<li id="menu-item-${count}"><a href="http://localhost:8081/presentation-gcd/admin/${categoryName4}-${categoryDTO.categoryId}">${categoryDTO.categoryName}</a></li>
-        <c:set var="count" value="${count + 1}" scope="page"/>
-        </c:forEach>     
+					<c:set var="categoryName" value="${categoryDTO.categoryName}" />
+					<c:set var="categoryName1" value="${fn:split(categoryName, ' ')}" />
+					<c:set var="categoryName2" value="${fn:join(categoryName1, '-')}" />
+					<c:set var="categoryName3" value="${fn:split(categoryName2, '/')}" />
+					<c:set var="categoryName4" value="${fn:join(categoryName3, '-')}" />
+					<li id="menu-item-${count}"><a href="http://localhost:8081/presentation-gcd/admin/${categoryName4}-${categoryDTO.categoryId}">${categoryDTO.categoryName}(${categoryDTO.counts})</a> <c:forEach var="hash" items="${subCtgByCtgId}">
+							<c:if test="${categoryDTO.categoryId==hash.key}">
+								<ul id="subcategory">
+									<c:forEach var="subCategories" items="${hash.value}">
+										<c:set var="subCtgName" value="${subCategories.subCategoryName}" />
+										<c:set var="subCtgName1" value="${fn:split(subCtgName, ' ')}" />
+										<c:set var="subCtgName2" value="${fn:join(subCtgName1, '-')}" />
+										<c:set var="subCtgName3" value="${fn:split(subCtgName2, '/')}" />
+										<c:set var="subCtgName4" value="${fn:join(subCtgName3, '-')}" />
+										<li><a href="http://localhost:8081/presentation-gcd/admin/${categoryName4}-${categoryDTO.categoryId}/${subCtgName4}-${subCategories.subCategoryId}">${subCategories.subCategoryName}(${subCategories.counts})</a></li>
+									</c:forEach>
+								</ul>
+							</c:if>
+						</c:forEach></li>
+						<c:set var="count" value="${count + 1}" scope="page"/>
+				</c:forEach>
+			
 		<li id="menu-item-13" class="view-all"><a class="dc-mega"
 			href="#"> View all Categories ></a></li>
 	</ul>
