@@ -115,6 +115,7 @@ gapi.analytics.ready(function() {
 			</div>
 		</div>
 		<div class="cf_wd cf_ftlk">
+			
 			<ul>
 				<%
 					if (dto3 != null && !CollectionUtils.isEmpty(dto3.getGcdMetaDTOs())) {
@@ -135,6 +136,7 @@ gapi.analytics.ready(function() {
 						}
 					}
 				%>
+				</ul>
 				<!-- <li><a href="#">About Us</a> <a href="#">Success Stories</a> <a href="#">Press Section</a>
 					<a href="#">Sell on Ceo Stock</a> <a href="#">Advertise with Us</a></li>
 				<li><a href="#">Feedback</a> <a href="#">Complaints</a> <a href="#">Help</a> <a href="#">Jobs
@@ -157,7 +159,7 @@ gapi.analytics.ready(function() {
 					</div> <a href="#" target="_blank">Trade Shows</a> <a href="#" target="_blank">Conferences</a> <a
 					href="#" target="_blank">Events by Country</a>
 				</li> -->
-			</ul>
+			
 		</div>
 		<div class="cf_cryt">
 			<div class="cf_wd">
