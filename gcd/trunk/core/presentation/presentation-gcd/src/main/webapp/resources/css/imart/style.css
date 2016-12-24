@@ -4359,3 +4359,254 @@ transform:perspective(120px) rotateX(-180deg) rotateY(-179.9deg)
 .cf_ftlk li:nth-last-child(3){
 	width: 240px;
 }
+.popup_content {
+	max-width: 493px;
+    min-width: 494px;
+    padding: 0;
+    border: 1px solid gray;
+    background-color: #fff;
+}
+.demo_close {
+	position: absolute;
+    right: 0px;
+    background: #fff;
+    border: 0;
+}
+.cont_login .cont_mob {
+	position: absolute;
+	margin: 7px 9px 9px 7px;
+	padding: 0px 7px;
+}
+.cont_dlogin .dropdown dt a {
+	width: 38px;
+	position: relative;
+	top: 1px
+}
+.cont_login .dropdown dt a span {
+	margin: 8px 3px
+}
+.cont_login dl dt .value {
+	background-color: #f1f1f1;
+	border-left: 1px solid #bdc7d8;
+	bottom: 2px;
+	display: inline-block;
+	font-size: 14px;
+	height: 32px;
+	left: 4px;
+	padding: 8px 4px 2px;
+	position: relative;
+	text-align: center;
+	width: 47px;
+	padding-top: 17px
+}
+.un_s {
+	padding-left: 16px;
+	width: 420px
+}
+.cont_login .dropdown dd ul {
+	width: 300px!important;
+	left: -3px;
+	top: -1px!important
+}
+.cont_login dl dt a .as_arrow {
+	margin-top: -22px
+}
+.one_s {
+    min-height: 240px;
+    max-height: 450px;
+    box-shadow: 0 1px 7px #333;
+}
+.c3 {
+    clear: both;
+}
+.step-1 {
+    background-color: #4d6169;
+    font-family: Arial,Helvetica,sans-serif;
+    overflow: hidden;
+    padding: 12px 0;
+    color: #fff;
+}
+.step-1 h2 {
+    color: #fff;
+    padding-left: 10px;
+    font-size: 20px!important;
+    font-weight: 700!important;
+    margin: 0;
+}
+.log16_s {
+    font-size: 20px;
+    padding: 12px 25px;
+    text-align: left;
+    overflow: hidden;
+    background: #fff;
+}
+.mt10_s {
+    margin-top: 10px;
+}
+.c3_s {
+    clear: both;
+}
+.label_s {
+    color: #333;
+    font-size: 17px;
+    margin: 3px 0 0 3px;
+    text-align: left;
+    font-weight: 400;
+}
+.f1, .fL {
+    float: left;
+}
+.cont_login .cont_mob {
+    position: absolute;
+    margin: 7px 9px 9px 7px;
+    padding: 0px 7px;
+}
+.dropdown dd, .dropdown dt, .dropdown ul {
+    margin: 0px;
+    padding: 0px;
+}
+.dropdown.cont_mob dt {
+    height: 100%;
+}
+.dropdown dt {
+    text-align: center;
+    height: 20px;
+}
+.dropdown dt a {
+    display: inline-block;
+    width: 35px;
+    height: 20px;
+}
+.cont_login .dropdown dt a span {
+    margin: 8px 3px;
+}
+.dropdown dt a span {
+    margin: 4px 3px;
+}
+.dropdown dt a span, .dropdown dd ul li span {
+    width: 16px;
+    height: 11px;
+    background: url(../images/country-v5.png);
+}
+.dropdown dt a span {
+    cursor: pointer;
+    display: block;
+}
+.as_arrow {
+    position: relative;
+    top: 40%;
+    margin-top: -19px;
+    left: 24px;
+    width: 0;
+    height: 0;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-top: 4px solid #555;
+}
+.cont_login dl dt a .as_arrow {
+    margin-top: -22px;
+}
+.cont_login dl dt .value {
+    background-color: #f1f1f1;
+    border-left: 1px solid #bdc7d8;
+    bottom: 2px;
+    display: inline-block;
+    font-size: 14px;
+    height: 32px;
+    left: 4px;
+    padding: 8px 4px 2px;
+    position: relative;
+    text-align: center;
+    width: 47px;
+    padding-top: 17px;
+}
+.value {
+    bottom: 5px;
+    left: 2px;
+    position: relative;
+    font-size: 14px;
+    font-family: Arial;
+}
+.cont_login .dropdown dd ul {
+    width: 300px!important;
+    left: -3px;
+    top: -1px!important;
+}
+.dropdown dd ul {
+    text-align: left;
+}
+.dropdown dd ul {
+    background: #FFFFFF none repeat scroll 0 0;
+    display: none;
+    list-style: none;
+    padding: 5px;
+    position: absolute;
+    left: 0px;
+    top: 2px;
+    width: auto;
+    height: 155px;
+    overflow-y: scroll;
+    border: 1px solid #bdc7d8;
+}
+.dropdown dd ul {
+    width: 300px!important;
+    z-index: 99;
+    top: 8px!important;
+}
+.dropdown dd ul li {
+    height: 24px!important;
+    text-align: left;
+}
+.dropdown dd ul li a {
+    color: black;
+    padding: 5px;
+    display: block;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: arial;
+    text-decoration: none;
+}
+#submtbtn_wpwd.continue_s {
+    border-bottom: 4px solid #148614;
+}
+.continue_s {
+    background: #38aa38;
+    border-color: #38aa38;
+    border-radius: 5px;
+    border-width: 0 0 4px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+    margin: 15px 0 25px;
+    padding: 8px 105px;
+    text-align: center;
+}
+.un_s {
+    padding-left: 16px;
+    width: 420px;
+}
+.un_s {
+    border: 1px solid #bdc7d8;
+    border-radius: 5px;
+    font-family: 'lucida grande',tahoma,verdana,arial,sans-serif;
+    font-size: 17px;
+    letter-spacing: 1.5px;
+    margin-top: 4px!important;
+    outline: 0;
+    width: 430px;
+    padding: 15px 7px 17px 7px;
+    box-shadow: 0 -2px 0 rgba(0,0,0,0.1) inset;
+}
+.off_s {
+    display: none!important;
+}
+.em-1 {
+    color: #C33;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    padding: 1px 0 5px 3px;
+    clear: left;
+    float: left;
+    width: 100%;
+}

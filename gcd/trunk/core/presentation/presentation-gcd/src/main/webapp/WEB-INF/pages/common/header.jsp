@@ -194,7 +194,7 @@
 				<div class="top-bar-section text-center">
 					<ul class="right space-top columns">
 						<!--<li><a href="#">Sign In</a></li>-->
-						<li id="lshead" class=""><a href="#">Sign In</a></li>
+						<li id="lshead" class=""><a href="#demo" class="demo_open">Sign In</a></li>
 						<li id="selld" class=""><a href="#"><span>Sell</span><span
 								class="arwd">&#9662;</span></a></li>
 					</ul>

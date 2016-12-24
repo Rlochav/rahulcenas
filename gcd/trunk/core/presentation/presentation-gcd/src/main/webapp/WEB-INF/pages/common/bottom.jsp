@@ -91,6 +91,19 @@ gapi.analytics.ready(function() {
     timeline.set(newIds).execute();
   });
 });
+
+
+
+$(document).ready(function(){
+	
+
+	$(".cf_wd_ul li:nth-child(4)").addClass('cf_wdth');
+	$(".cf_wd_ul li:nth-child(3)").addClass('cf_wdth');
+	$(".cf_wd_ul li:nth-child(5)").addClass('last');
+
+	});
+
+
 </script>
 <script src="<c:url value='/resources/js/imart/custom.js'/>"></script>
 
@@ -114,26 +127,28 @@ gapi.analytics.ready(function() {
 				<span class="cf_fhd">We are here to help you!</span>
 			</div>
 		</div>
-		<div class="cf_wd cf_ftlk">
+		<div class="cf_wd cf_ftlk ">
 			
-			<ul>
-				<%
+			<ul class="cf_wd_ul">
+				<%  int count = 1, count2 = 1;
 					if (dto3 != null && !CollectionUtils.isEmpty(dto3.getGcdMetaDTOs())) {
 						for (GcdMetaDTO g : dto3.getGcdMetaDTOs()) {
 							if (g.getShowOnPage().equals("Yes")) {
-								
-								if("0".equals(g.getBreakGroup())){
+								if(count==1 || count2==20){
+								//if("0".equals(g.getBreakGroup())){
 									%><li>
 					<%
 								}
 				%> <a href="<%=g.getUrl()%>"><%=g.getImageAlt()%></a> <%
-					}
-							if("1".equals(g.getBreakGroup())||dto3.getGcdMetaDTOs().size()==1){
+					
+				  count =count+1; count2 =count2+1;
+			      if(count==6 || count2==20){			
+							//if("1".equals(g.getBreakGroup())||dto3.getGcdMetaDTOs().size()==1){
 								%>
 				</li>
-				<%
-							}
-						}
+				<%    
+							count = 1; }
+						} }
 					}
 				%>
 				</ul>
