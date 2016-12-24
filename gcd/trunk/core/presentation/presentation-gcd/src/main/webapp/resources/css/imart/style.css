@@ -4486,7 +4486,7 @@ transform:perspective(120px) rotateX(-180deg) rotateY(-179.9deg)
 .dropdown dt a span, .dropdown dd ul li span {
     width: 16px;
     height: 11px;
-    background: url(../images/country-v5.png);
+    background: url(/presentation-gcd/resources/images/imart/country-v5.png);
 }
 .dropdown dt a span {
     cursor: pointer;
