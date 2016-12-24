@@ -80,6 +80,6 @@
 				</c:forEach>
 			
 		<li id="menu-item-13" class="view-all"><a class="dc-mega"
-			href="#"> View all Categories ></a></li>
+			href="component/subCategoryDetails"> View all Categories ></a></li>
 	</ul>
 </div>
