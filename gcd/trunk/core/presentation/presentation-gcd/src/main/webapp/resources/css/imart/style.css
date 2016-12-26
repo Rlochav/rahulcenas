@@ -1608,6 +1608,9 @@ h2 {
 	position: absolute;
 	padding: 0;
 	top: 0;
+	/*left: 218px!important;
+	display: none !important;*/
+	
 
 	
 }
@@ -1621,7 +1624,7 @@ h2 {
 	border-top: 1px solid #ccc;
 	border-right: 1px solid #bbb;
 	border-bottom: 5px solid #1d2041;
-	border-left: 1px solid transparent
+	border-left: 1px solid transparent;
 }
 .dcjq-vertical-mega-menu .menu li .sub .row {
 	width: 100%;
@@ -3998,7 +4001,7 @@ transform:perspective(120px) rotateX(-180deg) rotateY(-179.9deg)
 	margin-bottom: 57px
 }
 #t21_q_contact_dtl .country_list {
-	text-align: left
+	text-align: left;
 }
 .bst-price {
 	color: #fff;

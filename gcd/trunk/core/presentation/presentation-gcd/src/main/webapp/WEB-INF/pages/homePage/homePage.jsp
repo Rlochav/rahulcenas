@@ -1356,7 +1356,9 @@ $("#menu-bar .width16").removeClass("extend");
 }
 });
 </script>
-<div id="demo"><button class="demo_close">X</button>
+<div id="demo"><button class="demo_close">
+<img src="/presentation-gcd/resources/images/imart/3.png">
+</button>
   <div class="one_s">
     <div class="c3"></div>
     <div id="form_bxx">
