@@ -4507,7 +4507,7 @@ transform:perspective(120px) rotateX(-180deg) rotateY(-179.9deg)
     border-top: 4px solid #555;
 }
 .cont_login dl dt a .as_arrow {
-    margin-top: -22px;
+    
 }
 .cont_login dl dt .value {
     background-color: #f1f1f1;
