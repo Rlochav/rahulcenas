@@ -143,7 +143,7 @@ $('#demo').popup();
 											placeholder="Provide specific details about : &quot;Product/Service required&quot;, &quot;Quality&quot;, &quot;Standard&quot;, &quot;Size&quot; etc..."></textarea>
 										<div></div>
 										<div id="t21_q_contact_dtl1" class="relt" style="display: block;">
-											<dl
+											<!-- <dl
 												style="border: 1px solid #ccc; margin: 5px 0px 0px 2px; padding: 8px 0px 7px 0px; box-shadow: 0 -2px 0px rgba(0, 0, 0, 0.1) inset; box-sizing: border-box; -moz-box-sizing: border-box; border-radius: 0px; text-align: center; height: 40px; width: 15%; float: left; background-color: #fff"
 												id="t21_Country_dropdown" class="dropdown" autocomplete="off">
 												<dt>
@@ -172,7 +172,7 @@ $('#demo').popup();
 																More</a></li>
 													</ul>
 												</dd>
-											</dl>
+											</dl> -->
 											<div id="t21_indian_user" style="overflow: visible; display: block;">
 												<div style="position: absolute; top: 50px; right: 21%; display: none" name="error_mob"
 													id="t21_error_mob">
@@ -1132,7 +1132,7 @@ $('.width16.menu').removeClass("sticky-btm");
 
 
 </script>
-	<script>
+<script>
 $('.identified-arrow').click(function(){
 var recomTopPosition=document.getElementById('recommended-product-buyer').offsetTop;
 //var naviheight=$('#navi').outerHeight();
